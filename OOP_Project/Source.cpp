@@ -3,6 +3,7 @@
 #include "NNeighbor.h"
 #include <iostream>
 
+
 void parseLine(std::stringstream&, std::string&, std::string&, std::string&);
 
 int main(void) {
@@ -45,13 +46,13 @@ int main(void) {
 	userData.setZ(std::stoi(z));
 
 	userData.setLabel(model.predict(userData));
-	model.addData(userData);
+	model.train(userData);
 
 	//print dataset. add function.
 	
-	//override << operator for vector to output to file
-	
 
+	fout << model.getDataSet();
+	
 	return 0;
 }
 

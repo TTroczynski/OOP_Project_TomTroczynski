@@ -11,8 +11,6 @@ class NNeighbor : public Classifier
 public:
 	void train(Data&);
 	std::string predict(Data&);
-	void addData(Data&);
-	
-
+	std::vector<Data> getDataSet();
 };
 

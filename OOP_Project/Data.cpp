@@ -67,3 +67,13 @@ double Data::getX()
 {
     return  this->x;
 }
+
+std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> dataSet)
+{
+    for (Data element : dataSet) {
+        fOut << std::to_string(element.getX());
+        fOut << std::to_string(element.getY());
+        fOut << std::to_string(element.getZ());
+        fOut << element.getLabel();
+    }
+}

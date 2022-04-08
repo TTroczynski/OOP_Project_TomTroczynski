@@ -2,6 +2,8 @@
 #include <math.h>
 #include <string>
 #include <vector>
+#include <fstream>
+
 
 class Data
 {
@@ -27,6 +29,7 @@ public:
 	std::string getLabel();
 	void setLabel(std::string);
 	Data& operator=(Data& data);
+	friend std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> set);
 
 };
 

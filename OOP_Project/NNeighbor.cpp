@@ -50,7 +50,8 @@ std::string NNeighbor::predict(Data& newData)
 	return this->dataSet[bestMatchIndex].getLabel();
 }
 
-void NNeighbor::addData(Data& newData)
+std::vector<Data> NNeighbor::getDataSet()
 {
-	this->dataSet.push_back(newData);
+	return this->dataSet;
 }
+
