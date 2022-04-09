@@ -2,27 +2,47 @@
 
 Data::Data():x(0), y(0), z(0) {}
 
+Data::Data(const Data& copy)
+{
+    this->setX(copy.x);
+    this->setY(copy.y);
+    this->setZ(copy.z);
+    this->setLabel(copy.label);
+
+}
+
 Data::Data(double x, double y, double z) {
     this->x = x;
     this->y = y;
     this->z = z;
 }
 
-void Data::setX(double)
+Data::Data(double x, double y, double z, std::string label)
 {
+    this->setX(x);
+    this->setY(y);
+    this->setZ(z);
+    this->setLabel(label);
 }
 
-void Data::setY(double)
+void Data::setX(double x)
 {
+    this->x = x;
 }
 
-void Data::setZ(double)
+void Data::setY(double y)
 {
+    this->y = y;
+}
+
+void Data::setZ(double z)
+{
+    this->z = z;
 }
 
 double Data::getDistance(Data& dataPoint)
 {
-    return (double)sqrtl(pow(dataPoint.getX() - this->x, dataPoint.getX() - this->x) + pow(dataPoint.getY() - this->y, dataPoint.getY() - this->y) + pow(dataPoint.getZ() - this->z, dataPoint.getZ() - this->z));
+    return (double)sqrtl(pow(dataPoint.getX() - this->x, 2) + pow(dataPoint.getY() - this->y, 2) + pow(dataPoint.getZ() - this->z, 2));
 }
 
 double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
@@ -49,9 +69,10 @@ void Data::setLabel(std::string label)
 
 Data& Data::operator=(Data& data)
 {
-    Data newData(data.getX(), data.getY(), data.getZ());
-    return newData;
+    Data* newData = new Data(data);
+    return *newData;
 }
+
 
 double Data::getY()
 {
@@ -72,8 +93,20 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> dataSet)
 {
     for (Data element : dataSet) {
         fOut << std::to_string(element.getX());
+        fOut << ", ";
         fOut << std::to_string(element.getY());
+        fOut << ", ";
         fOut << std::to_string(element.getZ());
+        fOut << ", ";
         fOut << element.getLabel();
+        fOut << std::endl;
     }
+    return fOut;
+}
+
+std::ostream& operator<<(std::ostream& cout, Data& dataPoint)
+{
+    cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", " << dataPoint.getLabel() << std::endl;
+
+    return cout;
 }

@@ -15,7 +15,9 @@ class Data
 public:
 
 	Data();
+	Data(const Data&);
 	Data(double, double, double);
+	Data(double, double, double, std::string);
 
 	void setX(double);
 	void setY(double);
@@ -30,6 +32,7 @@ public:
 	void setLabel(std::string);
 	Data& operator=(Data& data);
 	friend std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> set);
+	friend std::ostream& operator<<(std::ostream& cout, Data& dataPoint);
 
 };
 
