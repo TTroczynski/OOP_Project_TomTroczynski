@@ -1,6 +1,4 @@
-#include <sstream>
-#include "NNeighbor.h"
-#include <iostream>
+
 
 /*! \brief Nearest Neighbor ML Algorithm
 * 
@@ -9,7 +7,58 @@
 * Shortest distance is used to evaluate points. If two trained points are equidistant to an unlabeled point,
 * the mean distance of all classified points is calculated. The label/classification of the closest mean is chosen.
 */
+/*! \file NNeighbor.h
+	\brief Includes the model that will be used to make predicitions
 
+	Using this class this program will train a model using the Nearest Neighbor algorithm. This class handles 
+	equidistant points as an edge case which prevents scewing.
+*/
+
+/*! \file sstream.h
+	\brief The sstream library
+
+	This library provides simple functionality for reading and writing streams
+*/
+
+/*! \file iotream.h
+	\brief The iostream library
+
+	This library provides simple functionality for input/output to/from the user
+*/
+
+/*! \file trainingData.txt
+	\brief The data set used for training
+
+	This text file contains data as structureed text to train the algorithm with.
+*/
+
+/*! \file output.txt
+	\brief The file the program writes to
+
+	This file contains the data processed by the algorithm. Unknown points without classifier
+	labels get assigned the predicted label returned by the algorithm.
+*/
+
+/*! \file unknownData.txt
+	\brief The file containing all unclassified points
+
+	The data set that needs to be processed formatted as structured text.
+*/
+
+
+#include <sstream>
+#include "NNeighbor.h"
+#include <iostream>
+
+/*! \fn void parseLine(std::stringstream&, std::string& x, std::string& y, std::string& z)
+	\brief The function decomposes a single line from a file into 3 strings (x, y, z)
+
+	Passes to 
+	@param x
+	@param y
+	@param z
+	By reference
+*/
 
 void parseLine(std::stringstream&, std::string&, std::string&, std::string&);
 
@@ -70,7 +119,7 @@ int main(void) {
 			std::cout << element;
 		}
 	}
-	//CHECK THAT ALL DATA IS PROPERLY HIDDEN
+	//print side text not number
 	return 0;
 }
 

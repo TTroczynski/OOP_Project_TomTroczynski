@@ -1,6 +1,15 @@
 #pragma once
 #include "Data.h"
 
+//! Classifier Class
+/*!
+* Pure virtual class that outlines the inherited behaviour of all derived classes.
+* All models inheriting from this class shall implement the:
+* @see train()
+* @see predict()
+* functions.
+*/
+
 class Classifier : public Data
 {
 

@@ -1,3 +1,14 @@
+
+//! NNeighbor Class
+/*!
+* A machine learning model that inherits from the Classifier class.
+* This model makes is trained using Data objects containing x, y, z coordinates and a classifier label.
+* Predicitions are made first by checking for an edge case, 2 equidistant points,
+* This class implements:
+* @see train()
+* @see predict()
+* behaviours from the Classifier class.
+*/
 #pragma once
 #include "Classifier.h"
 #define MAXSIDES 6

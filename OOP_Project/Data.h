@@ -1,3 +1,11 @@
+//! Data Class
+/*!
+* A class that defines objects with 3 type: double values and a string label.
+* The label is the classifier of the Data object when training a machine learning algorithm. It
+* is also the value retrieved when making predictions.
+* The Data object packages a x, y, z coordinate with a classifier label for use by, and derived from, the Classifier class.
+*/
+
 #pragma once
 #include <math.h>
 #include <string>
