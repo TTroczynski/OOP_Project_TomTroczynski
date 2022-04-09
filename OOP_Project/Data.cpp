@@ -218,7 +218,7 @@ double Data::getX()
 /*! \brief Overloads the << operator for ofstream objects
 *
 * Makes possible writing Data objects to file using the << operator
-* Makes use of string library
+* Makes use of string library and fstream library
 * Calls getX(), getY(), getZ() and getLabel()
 * @see to_string()
 * @see getX()
@@ -249,7 +249,9 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 /*! \brief Overloads the << operator for ostream objects
 *
 * Makes possible printing of Data objects using the << operator
+* Makes use of iostream library
 * Calls getX(), getY(), getZ() and getLabel()
+* 
 * 
 * @see getX()
 * @see getY()
