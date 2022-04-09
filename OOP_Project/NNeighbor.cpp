@@ -1,5 +1,60 @@
 #include "NNeighbor.h"
 
+std::string NNeighbor::evaluateClosest(Data newData)
+{
+	int vectorSize = this->dataSet.size();
+	double tempCurrentDistance = 0;
+	double tempLeastDistance = DBL_MAX;
+	int bestMatchIndex = -1;
+	std::string prediction;
+
+	for (int j = 0; j < vectorSize; j++) {
+
+		tempCurrentDistance = newData.getDistance(this->dataSet[j]);
+
+		if (tempLeastDistance == tempCurrentDistance) {
+
+		return FAILEDTOFIND;
+
+		}
+		if (tempCurrentDistance < tempLeastDistance) {
+
+			tempLeastDistance = tempCurrentDistance;
+			bestMatchIndex = j;
+		}
+		
+		prediction = this->dataSet[bestMatchIndex].getLabel();
+	}
+	return prediction;
+}
+
+std::string NNeighbor::evaluateMeans(Data newData)
+{
+	int vectorSize = this->dataSet.size();
+	std::string prediction;
+	double closest = DBL_MAX;
+
+	for (int i = 1; i < MAXSIDES; i++) {
+
+		std::string label = std::to_string(i);
+
+		double labeledMean = newData.getMeanDistance(this->dataSet, label, newData);
+
+		if (labeledMean < closest) {
+
+			closest = labeledMean;
+			prediction = label;
+		}
+	}
+	if (!prediction.empty()) {
+		return prediction;
+	}
+	else {
+		return FAILEDTOFIND;
+	}
+	
+}
+
 /*! \brief Adds the data point to the model
 *
 * Adds data point to model so that it can be used to predict unknown (unlabeled) points
@@ -17,43 +72,14 @@ void NNeighbor::train(Data& newData)
 */
 std::string NNeighbor::predict(Data& newData)
 {
-	double tempLeastDistance = DBL_MAX;
-	double tempCurrentDistance = 0;
-	int bestMatchIndex = 0;
-
-	int vectorSize = this->dataSet.size();
-
-	for (int j = 0; j < vectorSize; j++) {
-
-		tempCurrentDistance = newData.getDistance(this->dataSet[j]);
-
-		if (tempCurrentDistance == tempLeastDistance) {
-
-			double closest = DBL_MAX;
-			std::string labelMemory;
-
-			for (int i = 1; i < MAXSIDES; i++) {
-
-				std::string label = std::to_string(i);
-				
-				double labeledMean = newData.getMeanDistance(this->dataSet, label);
-
-				if (labeledMean < closest) {
-
-					closest = labeledMean;
-					labelMemory = label;
-				}
-			}
-			return labelMemory;
-		}
-		else if (tempCurrentDistance < tempLeastDistance) {
-
-			tempLeastDistance = tempCurrentDistance;
-			bestMatchIndex = j;
-		}
+	std::string prediction;
+	if ((prediction = evaluateClosest(newData)) != FAILEDTOFIND) {
+		return prediction;
 	}
-	
-	return this->dataSet[bestMatchIndex].getLabel();
+	else if((prediction = evaluateMeans(newData)) != FAILEDTOFIND) {
+		return prediction;
+	}
+	return FAILEDTOFIND;
 }
 
 /*! \brief Retrieves the models data set

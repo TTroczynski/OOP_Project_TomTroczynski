@@ -64,7 +64,9 @@ int main(void) {
 			fout << predictions;
 			fout.close();
 		}
-		std::cout << model;
+		for (Data element : predictions) {
+			std::cout << element;
+		}
 	}
 	//CHECK THAT ALL DATA IS PROPERLY HIDDEN
 	return 0;

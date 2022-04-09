@@ -1,4 +1,5 @@
 #include "Data.h"
+#include <cmath>
 
 Data::Data():x(0), y(0), z(0) {}
 
@@ -42,15 +43,18 @@ void Data::setZ(double z)
 
 double Data::getDistance(Data& dataPoint)
 {
-    return (double)sqrtl(pow(dataPoint.getX() - this->x, 2) + pow(dataPoint.getY() - this->y, 2) + pow(dataPoint.getZ() - this->z, 2));
+    double factor = pow(FACTOR, DECIMALPLACES);
+    double distance = sqrtl(pow(dataPoint.getX() - this->x, 2) + pow(dataPoint.getY() - this->y, 2) + pow(dataPoint.getZ() - this->z, 2));
+    distance = ceil(distance * factor) / factor;
+    return distance;
 }
 
-double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
+double Data::getMeanDistance(std::vector<Data> dataSet, std::string side, Data& newData)
 {
     double mean = 0;
     for (Data data : dataSet) {
         if (data.getLabel() == side) {
-            mean += data.getDistance(data);
+            mean += data.getDistance(newData);
         }
     }
     mean /= (double)dataSet.size();

@@ -4,6 +4,9 @@
 #include <vector>
 #include <fstream>
 
+#define FACTOR 10
+#define DECIMALPLACES 5
+
 
 class Data
 {
@@ -27,7 +30,7 @@ public:
 	double getZ();
 
 	double getDistance(Data&);
-	double getMeanDistance(std::vector<Data>, std::string);
+	double getMeanDistance(std::vector<Data>, std::string, Data&);
 	std::string getLabel();
 	void setLabel(std::string);
 	Data& operator=(Data& data);
