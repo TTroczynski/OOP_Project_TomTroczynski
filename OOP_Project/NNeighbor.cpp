@@ -1,10 +1,13 @@
 #include "NNeighbor.h"
 
-/*! \bief Makes prediction based on shortest distance
+/*! \brief Makes prediction based on shortest distance
 *
 * Attempts to predict the label by returning the label
 * of the closest point, unless two different points
 * are equidistant
+* Calls getDistance() and getLabel()
+* @see getDistance
+* @see getLabel()
 * 
 * @param Data object reference
 * @return label of closest point
@@ -40,6 +43,8 @@ std::string NNeighbor::evaluateClosest(Data& newData)
 *
 * If we fail to find a closest due to a second equidistant point, we predict 
 * using the mean distance of all labels to find the closest mean and return that label
+* Calls getMeanDistance()
+* @see getMeanDistance()
 * 
 * @param Data object reference
 * @return label of closest mean of all classified points
@@ -86,6 +91,9 @@ void NNeighbor::train(Data& newData)
 *
 * Returns the label of the closest matching point or closest means label.
 * Each mean is calculated using a sum of all distances of points with each label.
+* Calls evaluateClosest() and evaluateMeans()
+* @see evaluateClosest()
+* @see evaluateMeans()
 * 
 * @param Data object reference
 * @return predicted label
@@ -116,6 +124,8 @@ std::vector<Data> NNeighbor::getDataSet()
 /*! \brief Overloads the << operator
 *
 * Makes printing NNeighbor objects with the << operator possible
+* Calls getDataSet()
+* @see getDataSet()
 * 
 * @param ostream object reference
 * @param NNeighbour object reference

@@ -12,6 +12,12 @@ Data::Data():x(0), y(0), z(0) {}
 /*! \brief Copy contructor
 *
 * Copies values of one Data object to this one
+* Calls setX(), setY(), setZ() and setLabel()
+* @see setX()
+* @see setY()
+* @see setZ()
+* @see setLabel()
+* 
 * @param Data object reference
 * @return No return value
 */
@@ -40,6 +46,12 @@ Data::Data(double x, double y, double z) {
 /*! \brief Parameterized constructor
 *
 * initializes x, y, z and label values to those passed as arguments
+* Calls setX(), setY(), setZ() and setLabel()
+* @see setX()
+* @see setY()
+* @see setZ()
+* @see setLabel()
+* 
 * @param X-value
 * @param Y-value
 * @param Z-value
@@ -91,6 +103,14 @@ void Data::setZ(double z)
 /*! \brief Retrieves distance from a point
 *
 * Evaluates the distance between a point and this Data point
+* Makes use of the cmath library
+* Calls getX(), getY(), getZ()
+* @see ceil()
+* @see pow()
+* @see sqrtl()
+* @see getX()
+* @see getY()
+* @see getZ()
 * 
 * @param Data object reference
 * @return distance between two points
@@ -106,6 +126,9 @@ double Data::getDistance(Data& dataPoint)
 /*! \brief Retrieves mean distance from a point
 *
 * Evaluates the distance between a point and this Data point
+* Calls getLabel(), getDistance()
+* @see getLabel()
+* @see getDistance()
 * 
 * @param vector<data> container object
 * @param side specified
@@ -195,6 +218,13 @@ double Data::getX()
 /*! \brief Overloads the << operator for ofstream objects
 *
 * Makes possible writing Data objects to file using the << operator
+* Makes use of string library
+* Calls getX(), getY(), getZ() and getLabel()
+* @see to_string()
+* @see getX()
+* @see getY()
+* @see getZ()
+* @see getLabel()
 * 
 * @param ofstream object reference
 * @param vector<Data> container object
@@ -219,6 +249,12 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 /*! \brief Overloads the << operator for ostream objects
 *
 * Makes possible printing of Data objects using the << operator
+* Calls getX(), getY(), getZ() and getLabel()
+* 
+* @see getX()
+* @see getY()
+* @see getZ()
+* @see getLabel()
 * 
 * @param ostream object reference
 * @param Data object reference
