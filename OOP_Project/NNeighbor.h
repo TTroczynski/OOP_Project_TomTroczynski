@@ -7,8 +7,8 @@ class NNeighbor : public Classifier
 {
 
 	std::vector<Data> dataSet;
-	std::string evaluateClosest(Data);
-	std::string evaluateMeans(Data);
+	std::string evaluateClosest(Data&);
+	std::string evaluateMeans(Data&);
 
 public:
 	void train(Data&);

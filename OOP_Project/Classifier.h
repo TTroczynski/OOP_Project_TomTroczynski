@@ -5,15 +5,21 @@ class Classifier : public Data
 {
 
 protected:
-/*! \brief Trains model 
+/*! \brief Virtual function for Training models 
 *
-* Trains the model with data points consisting of an x,y,z value
+*  Trains the model with data points consisting of an x,y,z value
+* 
+* @param Data object reference
 */
 	virtual void train(Data&) = 0;
 
-/*! \brief Predicts label
+/*! \brief Virtual function for predicting labels
 *
-* preicts label based on the supplied Data point by comapring against the entire set
+* predicts label based on the supplied Data point by comapring against the entire set
+* 
+* @param Data object reference
+* 
+* @return predicted label of new data point
 */
 	virtual std::string predict(Data&) = 0;
 };

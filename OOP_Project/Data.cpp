@@ -4,12 +4,16 @@
 /*! \brief Default constructor
 *
 * initializes x, y, z values to 0
+* @param No parameters
+* @return No return value
 */
 Data::Data():x(0), y(0), z(0) {}
 
 /*! \brief Copy contructor
 *
 * Copies values of one Data object to this one
+* @param Data object reference
+* @return No return value
 */
 Data::Data(const Data& copy)
 {
@@ -17,12 +21,15 @@ Data::Data(const Data& copy)
     this->setY(copy.y);
     this->setZ(copy.z);
     this->setLabel(copy.label);
-
 }
 
 /*! \brief Parameterized constructor
 *
 * initializes x, y, z values to those passed as arguments
+* @param X-value
+* @param Y-value
+* @param Z-value
+* @return No return value
 */
 Data::Data(double x, double y, double z) {
     this->x = x;
@@ -33,6 +40,11 @@ Data::Data(double x, double y, double z) {
 /*! \brief Parameterized constructor
 *
 * initializes x, y, z and label values to those passed as arguments
+* @param X-value
+* @param Y-value
+* @param Z-value
+* @param Classification_label
+* @return No return value
 */
 Data::Data(double x, double y, double z, std::string label)
 {
@@ -45,6 +57,8 @@ Data::Data(double x, double y, double z, std::string label)
 /*! \brief Set the Data object's X value
 *
 * Sets the Data objects X value to the one passed as an argument
+* @param X-Value
+* @return No return value
 */
 void Data::setX(double x)
 {
@@ -54,6 +68,8 @@ void Data::setX(double x)
 /*! \brief Set the Data object's Y value
 *
 * Sets the Data objects Y value to the one passed as an argument
+* 
+* @param Y-Value
 */
 void Data::setY(double y)
 {
@@ -64,6 +80,8 @@ void Data::setY(double y)
 /*! \brief Set the Data object's Z value
 *
 * Sets the Data objects Z value to the one passed as an argument
+* 
+* @param Z-Value
 */
 void Data::setZ(double z)
 {
@@ -73,6 +91,9 @@ void Data::setZ(double z)
 /*! \brief Retrieves distance from a point
 *
 * Evaluates the distance between a point and this Data point
+* 
+* @param Data object reference
+* @return distance between two points
 */
 double Data::getDistance(Data& dataPoint)
 {
@@ -85,6 +106,9 @@ double Data::getDistance(Data& dataPoint)
 /*! \brief Retrieves mean distance from a point
 *
 * Evaluates the distance between a point and this Data point
+* 
+* @param vector<data> container object
+* @param side specified
 */
 double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
 {
@@ -98,39 +122,86 @@ double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
     return mean;
 }
 
+/*! \brief Returns the label of this Data point
+*
+* The label of this data point is returned to the caller
+* 
+* @return Data objects label
+*/
 std::string Data::getLabel()
 {
     return this->label;
 }
 
+/*! \brief Sets the label of this Data point
+*
+* This data point's label is set the label passed as an argument
+* 
+* @param string label to set
+* 
+*/
 void Data::setLabel(std::string label)
 {
     this->label = label;
 }
 
+/*! \brief Overloads the = operator
+*
+* The = operator is overloaded to allow for assignments of Data to Data
+* 
+* @param Data object reference
+* 
+* @return new Data object
+*/
 Data& Data::operator=(Data& data)
 {
     Data* newData = new Data(data);
     return *newData;
 }
 
-
+/*! \brief Returns the Y value of this data point
+*
+* This data points Y value is returned to the caller
+* 
+* @return this objects Y-value
+*/
 double Data::getY()
 {
     return this->y;
 }
 
+/*! \brief Returns the Z value of this data point
+*
+* This data points Z value is returned to the caller
+* 
+* @return this objects Z-value
+*/
 double Data::getZ()
 {
     return this->z;
 }
 
+/*! \brief Returns the X value of this data point
+*
+* This data points X value is returned to the caller
+* 
+* @return this objects X-value
+*/
 double Data::getX()
 {
     return  this->x;
 }
 
-std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> dataSet)
+/*! \brief Overloads the << operator for ofstream objects
+*
+* Makes possible writing Data objects to file using the << operator
+* 
+* @param ofstream object reference
+* @param vector<Data> container object
+* 
+* @return ofstream object
+*/
+std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 {
     for (Data element : dataSet) {
         fOut << std::to_string(element.getX());
@@ -145,6 +216,13 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> dataSet)
     return fOut;
 }
 
+/*! \brief Overloads the << operator for ostream objects
+*
+* Makes possible printing of Data objects using the << operator
+* 
+* @param ostream object reference
+* @param Data object reference
+*/
 std::ostream& operator<<(std::ostream& cout, Data& dataPoint)
 {
     cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", " << dataPoint.getLabel() << std::endl;

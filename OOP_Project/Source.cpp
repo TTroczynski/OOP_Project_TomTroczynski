@@ -1,4 +1,3 @@
-#include <fstream>
 #include <sstream>
 #include "NNeighbor.h"
 #include <iostream>
@@ -6,6 +5,9 @@
 /*! \brief Nearest Neighbor ML Algorithm
 * 
 * Training a model with data and later supplying unlabeled data to the model to predictively assign a label
+* 
+* Shortest distance is used to evaluate points. If two trained points are equidistant to an unlabeled point,
+* the mean distance of all classified points is calculated. The label/classification of the closest mean is chosen.
 */
 
 

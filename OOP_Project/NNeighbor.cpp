@@ -5,8 +5,11 @@
 * Attempts to predict the label by returning the label
 * of the closest point, unless two different points
 * are equidistant
+* 
+* @param Data object reference
+* @return label of closest point
 */
-std::string NNeighbor::evaluateClosest(Data newData)
+std::string NNeighbor::evaluateClosest(Data& newData)
 {
 	int vectorSize = this->dataSet.size();
 	double tempCurrentDistance = 0;
@@ -37,8 +40,11 @@ std::string NNeighbor::evaluateClosest(Data newData)
 *
 * If we fail to find a closest due to a second equidistant point, we predict 
 * using the mean distance of all labels to find the closest mean and return that label
+* 
+* @param Data object reference
+* @return label of closest mean of all classified points
 */
-std::string NNeighbor::evaluateMeans(Data newData)
+std::string NNeighbor::evaluateMeans(Data& newData)
 {
 	int vectorSize = this->dataSet.size();
 	std::string prediction;
@@ -67,6 +73,8 @@ std::string NNeighbor::evaluateMeans(Data newData)
 /*! \brief Adds the data point to the model
 *
 * Adds data point to model so that it can be used to predict unknown (unlabeled) points
+* 
+* @param Data object reference
 */
 void NNeighbor::train(Data& newData)
 {
@@ -78,6 +86,9 @@ void NNeighbor::train(Data& newData)
 *
 * Returns the label of the closest matching point or closest means label.
 * Each mean is calculated using a sum of all distances of points with each label.
+* 
+* @param Data object reference
+* @return predicted label
 */
 std::string NNeighbor::predict(Data& newData)
 {
@@ -94,6 +105,8 @@ std::string NNeighbor::predict(Data& newData)
 /*! \brief Retrieves the models data set
 *
 * returns a vector containing all the points the model has been trained with
+* 
+* @return this NNeighbor's trained data set
 */
 std::vector<Data> NNeighbor::getDataSet()
 {
@@ -103,6 +116,11 @@ std::vector<Data> NNeighbor::getDataSet()
 /*! \brief Overloads the << operator
 *
 * Makes printing NNeighbor objects with the << operator possible
+* 
+* @param ostream object reference
+* @param NNeighbour object reference
+* 
+* @return ostream object
 */
 std::ostream& operator<<(std::ostream& cout, NNeighbor& model)
 {

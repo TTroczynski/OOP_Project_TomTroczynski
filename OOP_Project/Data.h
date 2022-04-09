@@ -28,13 +28,13 @@ public:
 	double getX();
 	double getY();
 	double getZ();
-
-	double getDistance(Data&);
-	double getMeanDistance(std::vector<Data>, std::string);
 	std::string getLabel();
 	void setLabel(std::string);
+	double getMeanDistance(std::vector<Data>, std::string);
+	double getDistance(Data&);
+
 	Data& operator=(Data& data);
-	friend std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data> set);
+	friend std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& set);
 	friend std::ostream& operator<<(std::ostream& cout, Data& dataPoint);
 
 };
