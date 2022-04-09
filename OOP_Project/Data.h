@@ -30,7 +30,7 @@ public:
 	double getZ();
 
 	double getDistance(Data&);
-	double getMeanDistance(std::vector<Data>, std::string, Data&);
+	double getMeanDistance(std::vector<Data>, std::string);
 	std::string getLabel();
 	void setLabel(std::string);
 	Data& operator=(Data& data);

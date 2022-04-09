@@ -1,8 +1,16 @@
 #include "Data.h"
 #include <cmath>
 
+/*! \brief Default constructor
+*
+* initializes x, y, z values to 0
+*/
 Data::Data():x(0), y(0), z(0) {}
 
+/*! \brief Copy contructor
+*
+* Copies values of one Data object to this one
+*/
 Data::Data(const Data& copy)
 {
     this->setX(copy.x);
@@ -12,12 +20,20 @@ Data::Data(const Data& copy)
 
 }
 
+/*! \brief Parameterized constructor
+*
+* initializes x, y, z values to those passed as arguments
+*/
 Data::Data(double x, double y, double z) {
     this->x = x;
     this->y = y;
     this->z = z;
 }
 
+/*! \brief Parameterized constructor
+*
+* initializes x, y, z and label values to those passed as arguments
+*/
 Data::Data(double x, double y, double z, std::string label)
 {
     this->setX(x);
@@ -26,21 +42,38 @@ Data::Data(double x, double y, double z, std::string label)
     this->setLabel(label);
 }
 
+/*! \brief Set the Data object's X value
+*
+* Sets the Data objects X value to the one passed as an argument
+*/
 void Data::setX(double x)
 {
     this->x = x;
 }
 
+/*! \brief Set the Data object's Y value
+*
+* Sets the Data objects Y value to the one passed as an argument
+*/
 void Data::setY(double y)
 {
     this->y = y;
 }
 
+
+/*! \brief Set the Data object's Z value
+*
+* Sets the Data objects Z value to the one passed as an argument
+*/
 void Data::setZ(double z)
 {
     this->z = z;
 }
 
+/*! \brief Retrieves distance from a point
+*
+* Evaluates the distance between a point and this Data point
+*/
 double Data::getDistance(Data& dataPoint)
 {
     double factor = pow(FACTOR, DECIMALPLACES);
@@ -49,12 +82,16 @@ double Data::getDistance(Data& dataPoint)
     return distance;
 }
 
-double Data::getMeanDistance(std::vector<Data> dataSet, std::string side, Data& newData)
+/*! \brief Retrieves mean distance from a point
+*
+* Evaluates the distance between a point and this Data point
+*/
+double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
 {
     double mean = 0;
     for (Data data : dataSet) {
         if (data.getLabel() == side) {
-            mean += data.getDistance(newData);
+            mean += data.getDistance(*this);
         }
     }
     mean /= (double)dataSet.size();

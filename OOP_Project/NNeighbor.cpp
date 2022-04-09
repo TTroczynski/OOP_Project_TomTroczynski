@@ -1,5 +1,11 @@
 #include "NNeighbor.h"
 
+/*! \bief Makes prediction based on shortest distance
+*
+* Attempts to predict the label by returning the label
+* of the closest point, unless two different points
+* are equidistant
+*/
 std::string NNeighbor::evaluateClosest(Data newData)
 {
 	int vectorSize = this->dataSet.size();
@@ -15,7 +21,6 @@ std::string NNeighbor::evaluateClosest(Data newData)
 		if (tempLeastDistance == tempCurrentDistance) {
 
 		return FAILEDTOFIND;
-
 		}
 		if (tempCurrentDistance < tempLeastDistance) {
 
@@ -28,6 +33,11 @@ std::string NNeighbor::evaluateClosest(Data newData)
 	return prediction;
 }
 
+/*! \brief Makes prediction based on mean distance
+*
+* If we fail to find a closest due to a second equidistant point, we predict 
+* using the mean distance of all labels to find the closest mean and return that label
+*/
 std::string NNeighbor::evaluateMeans(Data newData)
 {
 	int vectorSize = this->dataSet.size();
@@ -38,7 +48,7 @@ std::string NNeighbor::evaluateMeans(Data newData)
 
 		std::string label = std::to_string(i);
 
-		double labeledMean = newData.getMeanDistance(this->dataSet, label, newData);
+		double labeledMean = newData.getMeanDistance(this->dataSet, label);
 
 		if (labeledMean < closest) {
 
@@ -52,7 +62,6 @@ std::string NNeighbor::evaluateMeans(Data newData)
 	else {
 		return FAILEDTOFIND;
 	}
-	
 }
 
 /*! \brief Adds the data point to the model
