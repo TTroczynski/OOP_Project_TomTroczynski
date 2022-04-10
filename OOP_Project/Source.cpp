@@ -64,11 +64,11 @@ void parseLine(std::stringstream&, std::string&, std::string&, std::string&);
 
 int main(void) {
 
-	NNeighbor model;
-	std::string inFile = "trainingData.txt";
-	std::ifstream fin;
-	std::string fileLine;
-	std::string x, y, z, label;
+	NNeighbor model;//!< NNeighbor object
+	std::string inFile = "trainingData.txt";//!< File name of training data file
+	std::ifstream fin;//!< An input file stream
+	std::string fileLine;//!< A temporary buffer containing a line read from the trainingData.xt file
+	std::string x, y, z, label;//!< string variable containing a comma seperated value from each line read from the trainingData.txt file
 
 	fin.open(inFile);
 	if (fin.is_open()) {
@@ -79,18 +79,18 @@ int main(void) {
 
 			parseLine(rawLine, x, y, z);
 			std::getline(rawLine, label, '\n');
-			Data newData(std::stod(x), std::stod(y), std::stod(z), label);
+			Data newData(std::stod(x), std::stod(y), std::stod(z), label);//!< A new type: Data object containing the x, y z, label values read from the trainingData.txt file
 
 			model.train(newData);
 		}
 		fin.close();
 	}
 
-	std::string outFile = "output.txt";
-	inFile = "unknownData.txt";
-	std::ofstream fout;
-	std::string testLine;
-	std::vector<Data> predictions;
+	std::string outFile = "output.txt";//!< File name to write processed data to
+	inFile = "unknownData.txt";//!< File name of the unprocessed data
+	std::ofstream fout;//!< An output file stream
+	std::string testLine;//!< A temporary buffer containing a line read from the unknownData.txt file
+	std::vector<Data> predictions;//!<A container holding elements of type: Data
 
 	fin.open(inFile);
 	if (fin.is_open()) {
@@ -101,7 +101,7 @@ int main(void) {
 			std::stringstream rawLine(testLine);
 			parseLine(rawLine, x, y, z);
 
-			Data userData(std::stod(x), std::stod(y), std::stod(z));
+			Data userData(std::stod(x), std::stod(y), std::stod(z));//!< A new Data object containing the unprocessed data from the unknownData.txt file
 			userData.setLabel(model.predict(userData));
 
 			predictions.push_back(userData);

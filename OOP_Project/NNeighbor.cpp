@@ -89,9 +89,7 @@ void NNeighbor::train(Data& newData)
 
 /*! \brief Makes a prediction based on the modeled data
 *
-* Returns the label of the closest matching point or closest means label.
-* Each mean is calculated using a sum of all distances of points with each label.
-* Calls evaluateClosest() and evaluateMeans()
+* Returns the label of the closest matching point or closest means label. Each mean is calculated using a sum of all distances of points with each label.
 * @see evaluateClosest()
 * @see evaluateMeans()
 * 
@@ -123,8 +121,7 @@ std::vector<Data> NNeighbor::getDataSet()
 
 /*! \brief Overloads the << operator
 *
-* Makes printing NNeighbor objects with the << operator possible
-* Calls getDataSet()
+* Makes printing NNeighbor objects with the << operator possible. Calls getDataSet()
 * @see getDataSet()
 * 
 * @param ostream object reference

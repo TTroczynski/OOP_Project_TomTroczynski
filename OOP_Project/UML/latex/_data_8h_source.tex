@@ -1,0 +1,48 @@
+\hypertarget{_data_8h_source}{}\doxysection{Data.\+h}
+\label{_data_8h_source}\index{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.h@{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00009}00009 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00015}00015 \textcolor{preprocessor}{\#define FACTOR 10}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00016}00016 \textcolor{preprocessor}{\#define DECIMALPLACES 5}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00019}\mbox{\hyperlink{class_data}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{class_data}{Data}}}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00020}00020 \{}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00021}00021     \textcolor{keywordtype}{double} x;}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00022}00022     \textcolor{keywordtype}{double} y;}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00023}00023     \textcolor{keywordtype}{double} z;}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00024}00024     std::string label;}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00026}00026 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00028}00028     \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}();}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00029}00029     \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00030}00030     \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double});}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00031}00031     \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, std::string);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00033}00033     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a681a184aa26a20b0a11bf917ae0d465d}{setX}}(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00034}00034     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_aba1ab7b9ebb31c5452c3ea8996ed217a}{setY}}(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00035}00035     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_ac417a570be334599aef1c8c2ce68b241}{setZ}}(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00036}00036     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{getX}}();}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00037}00037     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{getY}}();}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00038}00038     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{getZ}}();}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00039}00039     std::string \mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{getLabel}}();}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00040}00040     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a51c1200e54d240a389c71247d17d8177}{setLabel}}(std::string);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00041}00041     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a2a8cb2280c6714ca587ef1f6ec638826}{getMeanDistance}}(std::vector<Data>, std::string);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00042}00042     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a045319273c026197bd7018fd471e4992}{getDistance}}(\mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00044}00044     \mbox{\hyperlink{class_data}{Data}}\& \mbox{\hyperlink{class_data_a782d460ec40a6961f38e50d20bb38097}{operator=}}(\mbox{\hyperlink{class_data}{Data}}\& data);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00045}00045     \textcolor{keyword}{friend} std::ofstream\& \mbox{\hyperlink{class_data_a158d3612de36eeb8d1b0181e34adcf86}{operator<<}}(std::ofstream\& fOut, std::vector<Data>\& set);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00046}00046     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_data_a158d3612de36eeb8d1b0181e34adcf86}{operator<<}}(std::ostream\& cout, \mbox{\hyperlink{class_data}{Data}}\& dataPoint);}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00048}00048 \};}
+\DoxyCodeLine{\Hypertarget{_data_8h_source_l00049}00049 }
+
+\end{DoxyCode}

@@ -4,7 +4,6 @@
 /*! \brief Default constructor
 *
 * initializes x, y, z values to 0
-* @param No parameters
 * @return No return value
 */
 Data::Data():x(0), y(0), z(0) {}
@@ -45,8 +44,7 @@ Data::Data(double x, double y, double z) {
 
 /*! \brief Parameterized constructor
 *
-* initializes x, y, z and label values to those passed as arguments
-* Calls setX(), setY(), setZ() and setLabel()
+* initializes x, y, z and label values to those passed as arguments. Calls setX(), setY(), setZ() and setLabel()
 * @see setX()
 * @see setY()
 * @see setZ()
@@ -102,9 +100,7 @@ void Data::setZ(double z)
 
 /*! \brief Retrieves distance from a point
 *
-* Evaluates the distance between a point and this Data point
-* Makes use of the cmath library
-* Calls getX(), getY(), getZ()
+* Evaluates the distance between a point and this Data point. Calls getX(), getY(), getZ() and makes use of the cmath library.
 * @see ceil()
 * @see pow()
 * @see sqrtl()
@@ -125,8 +121,7 @@ double Data::getDistance(Data& dataPoint)
 
 /*! \brief Retrieves mean distance from a point
 *
-* Evaluates the distance between a point and this Data point
-* Calls getLabel(), getDistance()
+* Evaluates the distance between a point and this Data point. Calls getLabel(), getDistance()
 * @see getLabel()
 * @see getDistance()
 * 
@@ -217,9 +212,7 @@ double Data::getX()
 
 /*! \brief Overloads the << operator for ofstream objects
 *
-* Makes possible writing Data objects to file using the << operator
-* Makes use of string library and fstream library
-* Calls getX(), getY(), getZ() and getLabel()
+* Makes possible writing Data objects to file using the << operator. Makes use of string library and fstream library. Calls getX(), getY(), getZ() and getLabel()
 * @see to_string()
 * @see getX()
 * @see getY()
@@ -248,10 +241,7 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 
 /*! \brief Overloads the << operator for ostream objects
 *
-* Makes possible printing of Data objects using the << operator
-* Makes use of iostream library
-* Calls getX(), getY(), getZ() and getLabel()
-* 
+* Makes possible printing of Data objects using the << operator. Makes use of iostream library. Calls getX(), getY(), getZ() and getLabel()
 * 
 * @see getX()
 * @see getY()

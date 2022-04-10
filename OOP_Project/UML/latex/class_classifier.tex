@@ -1,0 +1,92 @@
+\hypertarget{class_classifier}{}\doxysection{Classifier Class Reference}
+\label{class_classifier}\index{Classifier@{Classifier}}
+
+
+\mbox{\hyperlink{class_classifier}{Classifier}} Class.  
+
+
+
+
+{\ttfamily \#include $<$Classifier.\+h$>$}
+
+Inheritance diagram for Classifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_classifier}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}{train}} (\mbox{\hyperlink{class_data}{Data}} \&)=0
+\begin{DoxyCompactList}\small\item\em Virtual function for Training models. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_classifier_a0b08843c6cf81847a1ad3261a599c132}{predict}} (\mbox{\hyperlink{class_data}{Data}} \&)=0
+\begin{DoxyCompactList}\small\item\em Virtual function for predicting labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_classifier}{Classifier}} Class. 
+
+Pure virtual class that outlines the inherited behaviour of all derived classes. All models inheriting from this class shall implement the\+: \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}{train()}} 
+
+\mbox{\hyperlink{class_classifier_a0b08843c6cf81847a1ad3261a599c132}{predict()}} functions. 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_classifier_8h_source_l00013}{13}} of file \mbox{\hyperlink{_classifier_8h_source}{Classifier.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_classifier_a0b08843c6cf81847a1ad3261a599c132}\label{class_classifier_a0b08843c6cf81847a1ad3261a599c132}} 
+\index{Classifier@{Classifier}!predict@{predict}}
+\index{predict@{predict}!Classifier@{Classifier}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily virtual std\+::string Classifier\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Virtual function for predicting labels. 
+
+predicts label based on the supplied \mbox{\hyperlink{class_data}{Data}} point by comapring against the entire set
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predicted label of new data point 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{NNeighbor}}.
+
+\mbox{\Hypertarget{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}\label{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}} 
+\index{Classifier@{Classifier}!train@{train}}
+\index{train@{train}!Classifier@{Classifier}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily virtual void Classifier\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Virtual function for Training models. 
+
+Trains the model with data points consisting of an x,y,z value
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{NNeighbor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/developer/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/Classifier.\+h\end{DoxyCompactItemize}

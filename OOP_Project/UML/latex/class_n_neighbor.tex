@@ -1,0 +1,144 @@
+\hypertarget{class_n_neighbor}{}\doxysection{NNeighbor Class Reference}
+\label{class_n_neighbor}\index{NNeighbor@{NNeighbor}}
+Inheritance diagram for NNeighbor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_n_neighbor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{train}} (\mbox{\hyperlink{class_data}{Data}} \&)
+\begin{DoxyCompactList}\small\item\em Adds the data point to the model. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{predict}} (\mbox{\hyperlink{class_data}{Data}} \&)
+\begin{DoxyCompactList}\small\item\em Makes a prediction based on the modeled data. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_data}{Data}} $>$ \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{get\+Data\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the models data set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_n_neighbor}{NNeighbor}} \&model)
+\begin{DoxyCompactList}\small\item\em Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_n_neighbor_8h_source_l00017}{17}} of file \mbox{\hyperlink{_n_neighbor_8h_source}{NNeighbor.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}\label{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}} 
+\index{NNeighbor@{NNeighbor}!getDataSet@{getDataSet}}
+\index{getDataSet@{getDataSet}!NNeighbor@{NNeighbor}}
+\doxysubsubsection{\texorpdfstring{getDataSet()}{getDataSet()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_data}{Data}} $>$ NNeighbor\+::get\+Data\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the models data set. 
+
+returns a vector containing all the points the model has been trained with
+
+\begin{DoxyReturn}{Returns}
+this \mbox{\hyperlink{class_n_neighbor}{NNeighbor}}\textquotesingle{}s trained data set 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_n_neighbor_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{_n_neighbor_8cpp_source}{NNeighbor.\+cpp}}.
+
+\mbox{\Hypertarget{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}\label{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}} 
+\index{NNeighbor@{NNeighbor}!predict@{predict}}
+\index{predict@{predict}!NNeighbor@{NNeighbor}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily std\+::string NNeighbor\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{new\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Makes a prediction based on the modeled data. 
+
+Returns the label of the closest matching point or closest means label. Each mean is calculated using a sum of all distances of points with each label. \begin{DoxySeeAlso}{See also}
+evaluate\+Closest() 
+
+evaluate\+Means()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predicted label 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_classifier_a0b08843c6cf81847a1ad3261a599c132}{Classifier}}.
+
+
+
+Definition at line \mbox{\hyperlink{_n_neighbor_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{_n_neighbor_8cpp_source}{NNeighbor.\+cpp}}.
+
+\mbox{\Hypertarget{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}\label{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}} 
+\index{NNeighbor@{NNeighbor}!train@{train}}
+\index{train@{train}!NNeighbor@{NNeighbor}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void NNeighbor\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{new\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds the data point to the model. 
+
+Adds data point to model so that it can be used to predict unknown (unlabeled) points
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}{Classifier}}.
+
+
+
+Definition at line \mbox{\hyperlink{_n_neighbor_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_n_neighbor_8cpp_source}{NNeighbor.\+cpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}\label{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}} 
+\index{NNeighbor@{NNeighbor}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!NNeighbor@{NNeighbor}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout,  }\item[{\mbox{\hyperlink{class_n_neighbor}{NNeighbor}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. 
+
+Makes printing \mbox{\hyperlink{class_n_neighbor}{NNeighbor}} objects with the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator possible. Calls \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{get\+Data\+Set()}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{get\+Data\+Set()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & object reference \\
+\hline
+{\em NNeighbour} & object reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_n_neighbor_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{_n_neighbor_8cpp_source}{NNeighbor.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/developer/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/\mbox{\hyperlink{_n_neighbor_8h}{NNeighbor.\+h}}\item 
+C\+:/\+Users/developer/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/NNeighbor.\+cpp\end{DoxyCompactItemize}
