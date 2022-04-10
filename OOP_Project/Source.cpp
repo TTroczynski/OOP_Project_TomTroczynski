@@ -20,7 +20,7 @@
 	This library provides simple functionality for reading and writing streams
 */
 
-/*! \file iotream.h
+/*! \file iostream.h
 	\brief The iostream library
 
 	This library provides simple functionality for input/output to/from the user
