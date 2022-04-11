@@ -255,9 +255,32 @@ std::ostream& operator<<(std::ostream& cout, Data& dataPoint)
 {
     cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", ";
     
- 
-    
-    cout << dataPoint.getLabel() << std::endl;
+    std::string tempLabel = dataPoint.getLabel();
+    int tempLabelValue = std::stoi(tempLabel);
+
+    switch (tempLabelValue)
+    {
+    case 1:
+        cout << "Face up" << std::endl;
+        break;
+    case 2:
+        cout << "Face down" << std::endl;
+        break;
+    case 3:
+        cout << "Portrait" << std::endl;
+        break;
+    case 4:
+        cout << "Portrait upside down" << std::endl;
+        break;
+    case 5:
+        cout << "Landscape left" << std::endl;
+        break;
+    case 6:
+        cout << "Landscape right" << std::endl;
+        break;
+    default:
+        break;
+    }
 
     return cout;
 }
