@@ -8,10 +8,10 @@
 * the mean distance of all classified points is calculated. The label/classification of the closest mean is chosen.
 */
 /*! \file NNeighbor.h
-	\brief Includes the model that will be used to make predicitions
+	\brief A machine learning algorithm
 
 	Using this class this program will train a model using the Nearest Neighbor algorithm. This class handles 
-	equidistant points as an edge case which prevents scewing.
+	equidistant points as an edge case, preventing scewing.
 */
 
 /*! \file sstream.h
@@ -29,7 +29,7 @@
 /*! \file trainingData.txt
 	\brief The data set used for training
 
-	This text file contains data as structureed text to train the algorithm with.
+	This text file contains data as structured text to train the algorithm with.
 */
 
 /*! \file output.txt
