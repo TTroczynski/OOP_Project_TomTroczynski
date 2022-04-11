@@ -45,7 +45,6 @@
 	The data set that needs to be processed formatted as structured text.
 */
 
-
 #include <sstream>
 #include "NNeighbor.h"
 #include <iostream>
@@ -76,14 +75,18 @@ int main(void) {
 
 			std::getline(fin, fileLine);
 			std::stringstream rawLine(fileLine);
-
 			parseLine(rawLine, x, y, z);
 			std::getline(rawLine, label, '\n');
+
 			Data newData(std::stod(x), std::stod(y), std::stod(z), label);//!< A new type: Data object containing the x, y z, label values read from the trainingData.txt file
 
 			model.train(newData);
 		}
 		fin.close();
+	}
+	else {
+		std::cout << "Failed to open the training file. Closing." << std::endl;
+		exit(EXIT_FAILURE);
 	}
 
 	std::string outFile = "output.txt";//!< File name to write processed data to
@@ -97,7 +100,6 @@ int main(void) {
 		while (!fin.eof()) {
 
 			std::getline(fin, testLine);
-
 			std::stringstream rawLine(testLine);
 			parseLine(rawLine, x, y, z);
 
@@ -123,7 +125,7 @@ int main(void) {
 		}
 	}
 	else {
-		std::cout << "Failed to open the training file" << std::endl;
+		std::cout << "Failed to open the test data file. Closing" << std::endl;
 	}
 
 	return 0;
