@@ -5,7 +5,9 @@
 * This model is trained using Data objects containing x, y, z coordinates and a classifier label.
 * Predicitions are made first by checking for an edge case, 2 equidistant points,
 * The closest point is selected when classifying a vector. If there are two equidistant points
-* then, the mean location for each set containing each label is evaluated. The closes mean is chosen.
+* then, the mean distance is calculated between the new point and each point of every classification
+* The shortest mean distance is chosen. The label of the vectors whose mean distance is shortest is given to
+* the new vector.
 * 
 * This class implements:
 * @see train()
