@@ -90,7 +90,7 @@ int main(void) {
 	inFile = "unknownData.txt";//!< File name of the unprocessed data
 	std::ofstream fout;//!< An output file stream
 	std::string testLine;//!< A temporary buffer containing a line read from the unknownData.txt file
-	std::vector<Data> predictions;//!<A container holding elements of type: Data
+	std::vector<Data> predictions;//!< A container holding elements of type: Data
 
 	fin.open(inFile);
 	if (fin.is_open()) {
@@ -115,11 +115,17 @@ int main(void) {
 			fout << predictions;
 			fout.close();
 		}
+		else {
+			std::cout << "Failed to write to file. Closing." << std::endl;
+		}
 		for (Data element : predictions) {
 			std::cout << element;
 		}
 	}
-	//print side text not number
+	else {
+		std::cout << "Failed to open the training file" << std::endl;
+	}
+
 	return 0;
 }
 
