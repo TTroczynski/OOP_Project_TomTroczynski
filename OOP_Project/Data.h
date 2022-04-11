@@ -38,6 +38,7 @@ public:
 	double getZ();
 	std::string getLabel();
 	void setLabel(std::string);
+	
 	double getMeanDistance(std::vector<Data>, std::string);
 	double getDistance(Data&);
 

@@ -253,7 +253,11 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 */
 std::ostream& operator<<(std::ostream& cout, Data& dataPoint)
 {
-    cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", " << dataPoint.getLabel() << std::endl;
+    cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", ";
+    
+ 
+    
+    cout << dataPoint.getLabel() << std::endl;
 
     return cout;
 }

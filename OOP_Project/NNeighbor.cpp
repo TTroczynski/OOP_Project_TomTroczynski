@@ -14,7 +14,7 @@
 */
 std::string NNeighbor::evaluateClosest(Data& newData)
 {
-	int vectorSize = this->dataSet.size();
+	int vectorSize = (int)this->dataSet.size();
 	double tempCurrentDistance = 0;
 	double tempLeastDistance = DBL_MAX;
 	int bestMatchIndex = -1;
@@ -51,7 +51,7 @@ std::string NNeighbor::evaluateClosest(Data& newData)
 */
 std::string NNeighbor::evaluateMeans(Data& newData)
 {
-	int vectorSize = this->dataSet.size();
+	int vectorSize = (int)this->dataSet.size();
 	std::string prediction;
 	double closest = DBL_MAX;
 

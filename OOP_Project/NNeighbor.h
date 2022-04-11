@@ -14,7 +14,7 @@
 #define MAXSIDES 6
 #define FAILEDTOFIND "Failed to match coordinates"
 
-class NNeighbor : public Classifier
+class NNeighbor : protected Classifier
 {
 
 	std::vector<Data> dataSet;
