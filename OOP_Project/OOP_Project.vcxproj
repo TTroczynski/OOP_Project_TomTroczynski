@@ -142,12 +142,14 @@
     <ClCompile Include="Classifier.cpp" />
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="NNeighbor.cpp" />
+    <ClCompile Include="OtherModel.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classifier.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="NNeighbor.h" />
+    <ClInclude Include="OtherModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

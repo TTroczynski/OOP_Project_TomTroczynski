@@ -48,6 +48,7 @@
 #include <sstream>
 #include "NNeighbor.h"
 #include <iostream>
+#include "OtherModel.h"
 
 /*! \fn void parseLine(std::stringstream&, std::string& x, std::string& y, std::string& z)
 	\brief The function decomposes a single line from a file into 3 strings (x, y, z)
@@ -104,6 +105,7 @@ int main(void) {
 			parseLine(rawLine, x, y, z);
 
 			Data userData(std::stod(x), std::stod(y), std::stod(z));//!< A new Data object containing the unprocessed data from the unknownData.txt file
+			
 			userData.setLabel(model.predict(userData));
 
 			predictions.push_back(userData);
@@ -127,6 +129,15 @@ int main(void) {
 	else {
 		std::cout << "Failed to open the test data file. Closing" << std::endl;
 	}
+
+	OtherModel mockModel;
+	Data mockData;
+
+	mockModel.train(mockData);
+	mockModel.predict(mockData);
+	
+	std::cout << mockModel;
+	
 
 	return 0;
 }

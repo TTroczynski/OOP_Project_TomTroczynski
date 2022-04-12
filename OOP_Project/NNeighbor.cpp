@@ -26,7 +26,7 @@ std::string NNeighbor::evaluateClosest(Data& newData)
 
 		if (tempLeastDistance == tempCurrentDistance) {
 
-		return FAILEDTOFIND;
+			return FAILEDTOFIND;
 		}
 		if (tempCurrentDistance < tempLeastDistance) {
 
