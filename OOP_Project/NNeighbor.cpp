@@ -61,6 +61,14 @@ std::string NNeighbor::evaluateMeans(Data& newData)
 
 		double labeledMean = newData.getMeanDistance(this->dataSet, label);
 
+		if (labeledMean == closest) {
+
+			if (time(NULL) % COIN) {								//if two means are equidistant, flip a coin, choose one at random.
+				
+				prediction = labeledMean;
+			}
+		}
+
 		if (labeledMean < closest) {
 
 			closest = labeledMean;

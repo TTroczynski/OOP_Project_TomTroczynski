@@ -18,6 +18,7 @@
 #include "Classifier.h"
 #define MAXSIDES 6
 #define FAILEDTOFIND "Failed to match vector"
+#define COIN 2
 
 class NNeighbor : protected Classifier
 {

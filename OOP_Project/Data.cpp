@@ -131,12 +131,15 @@ double Data::getDistance(Data& dataPoint)
 double Data::getMeanDistance(std::vector<Data> dataSet, std::string side)
 {
     double mean = 0;
+    int count = 0;
+
     for (Data data : dataSet) {
         if (data.getLabel() == side) {
             mean += data.getDistance(*this);
+            count++;
         }
     }
-    mean /= (double)dataSet.size();
+    mean /= count;
     return mean;
 }
 
