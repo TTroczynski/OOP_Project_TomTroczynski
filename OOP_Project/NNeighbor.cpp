@@ -1,5 +1,5 @@
 #include "NNeighbor.h"
-#include "Exception.h"
+
 
 /*! \brief Makes prediction based on shortest distance
 *

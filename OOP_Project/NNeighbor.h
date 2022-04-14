@@ -16,6 +16,8 @@
 */
 #pragma once
 #include "Classifier.h"
+#include "Exception.h"
+
 #define MAXSIDES 6
 #define FAILEDTOFINDCLOSEST "Failed to find closest vector"
 #define FAILEDTOFINDMEAN "Failed to find closest mean"
