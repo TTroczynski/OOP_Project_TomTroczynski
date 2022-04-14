@@ -143,6 +143,7 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="NNeighbor.cpp" />
+    <ClCompile Include="OtherModel.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="Data.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="NNeighbor.h" />
+    <ClInclude Include="OtherModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

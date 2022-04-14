@@ -32,6 +32,6 @@ public:
 	std::string predict(Data&);
 	std::vector<Data> getDataSet();
 
+
 	friend std::ostream& operator<<(std::ostream&, NNeighbor& model);
 };
-
