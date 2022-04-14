@@ -1,12 +1,13 @@
 \hypertarget{_source_8cpp_source}{}\doxysection{Source.\+cpp}
-\label{_source_8cpp_source}\index{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Source.cpp@{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Source.cpp}}
+\label{_source_8cpp_source}\index{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Source.cpp@{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Source.cpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00001}00001 }
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00049}00049 \textcolor{preprocessor}{\#include <sstream>}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00050}00050 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_neighbor_8h}{NNeighbor.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00051}00051 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00048}00048 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00049}00049 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_neighbor_8h}{NNeighbor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00050}00050 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00051}00051 \textcolor{preprocessor}{\#include "{}OtherModel.h"{}}}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00052}00052 }
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00063}00063 \textcolor{keywordtype}{void} parseLine(std::stringstream\&, std::string\&, std::string\&, std::string\&);}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00064}00064 }
@@ -24,58 +25,77 @@
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00076}00076 }
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00077}00077             std::getline(fin, fileLine);}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00078}00078             std::stringstream rawLine(fileLine);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00079}00079 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00080}00080             parseLine(rawLine, x, y, z);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00081}00081             std::getline(rawLine, label, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00079}00079             parseLine(rawLine, x, y, z);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00080}00080             std::getline(rawLine, label, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00081}00081 }
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00082}00082             \mbox{\hyperlink{class_data}{Data}} newData(std::stod(x), std::stod(y), std::stod(z), label);}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00083}00083 }
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00084}00084             model.\mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{train}}(newData);}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00085}00085         \}}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00086}00086         fin.close();}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00087}00087     \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00089}00089     std::string outFile = \textcolor{stringliteral}{"{}output.txt"{}};}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00090}00090     inFile = \textcolor{stringliteral}{"{}unknownData.txt"{}};}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00091}00091     std::ofstream fout;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00092}00092     std::string testLine;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00093}00093     std::vector<Data> predictions;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00095}00095     fin.open(inFile);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00096}00096     \textcolor{keywordflow}{if} (fin.is\_open()) \{}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00097}00097         \textcolor{keywordflow}{while} (!fin.eof()) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00088}00088     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00089}00089         std::cout << \textcolor{stringliteral}{"{}Failed to open the training file. Closing."{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00090}00090         exit(EXIT\_FAILURE);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00093}00093     std::string outFile = \textcolor{stringliteral}{"{}output.txt"{}};}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00094}00094     inFile = \textcolor{stringliteral}{"{}unknownData.txt"{}};}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00095}00095     std::ofstream fout;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00096}00096     std::string testLine;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00097}00097     std::vector<Data> predictions;}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00099}00099             std::getline(fin, testLine);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00100}00100 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00101}00101             std::stringstream rawLine(testLine);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00102}00102             parseLine(rawLine, x, y, z);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00103}00103 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00104}00104             \mbox{\hyperlink{class_data}{Data}} userData(std::stod(x), std::stod(y), std::stod(z));}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00105}00105             userData.setLabel(model.\mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{predict}}(userData));}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00099}00099     fin.open(inFile);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00100}00100     \textcolor{keywordflow}{if} (fin.is\_open()) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00101}00101         \textcolor{keywordflow}{while} (!fin.eof()) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00103}00103             std::getline(fin, testLine);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00104}00104             std::stringstream rawLine(testLine);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00105}00105             parseLine(rawLine, x, y, z);}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00106}00106 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00107}00107             predictions.push\_back(userData);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00108}00108         \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00109}00109         fin.close();}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00107}00107             \mbox{\hyperlink{class_data}{Data}} userData(std::stod(x), std::stod(y), std::stod(z));}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00108}00108             }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00109}00109             userData.setLabel(model.\mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{predict}}(userData));}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00110}00110 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00111}00111         fout.open(outFile);}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00112}00112 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00113}00113         \textcolor{keywordflow}{if} (fout.is\_open()) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00111}00111             predictions.push\_back(userData);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00113}00113         fin.close();}
 \DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00114}00114 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00115}00115             fout << predictions;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00116}00116             fout.close();}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00117}00117         \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00118}00118         \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : predictions) \{}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00119}00119             std::cout << element;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00120}00120         \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00121}00121     \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00122}00122     \textcolor{comment}{//print side text not number}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00123}00123     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00124}00124 \}}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00125}00125 }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00130}00130 \textcolor{keywordtype}{void} parseLine(std::stringstream\& rawLine, std::string\& x, std::string\& y, std::string\& z) \{}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00131}00131     }
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00132}00132     std::getline(rawLine, x, \textcolor{charliteral}{','});}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00133}00133     std::getline(rawLine, y, \textcolor{charliteral}{','});}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00134}00134     std::getline(rawLine, z, \textcolor{charliteral}{','});}
-\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00135}00135 \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00115}00115         fout.open(outFile);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00117}00117         \textcolor{keywordflow}{if} (fout.is\_open()) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00119}00119             fout << predictions;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00120}00120             fout.close();}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00121}00121         \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00122}00122         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00123}00123             std::cout << \textcolor{stringliteral}{"{}Failed to write to file. Closing."{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00124}00124         \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00125}00125         \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : predictions) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00126}00126             std::cout << element;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00127}00127         \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00129}00129     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00130}00130         std::cout << \textcolor{stringliteral}{"{}Failed to open the test data file. Closing"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00131}00131     \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00133}00133     \mbox{\hyperlink{class_other_model}{OtherModel}} mockModel;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00134}00134     \mbox{\hyperlink{class_data}{Data}} mockData;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00136}00136     mockModel.\mbox{\hyperlink{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}{train}}(mockData);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00137}00137     mockModel.\mbox{\hyperlink{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}{predict}}(mockData);}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00138}00138     }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00139}00139     std::cout << mockModel;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00140}00140     }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00142}00142     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00143}00143 \}}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00149}00149 \textcolor{keywordtype}{void} parseLine(std::stringstream\& rawLine, std::string\& x, std::string\& y, std::string\& z) \{}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00150}00150     }
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00151}00151     std::getline(rawLine, x, \textcolor{charliteral}{','});}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00152}00152     std::getline(rawLine, y, \textcolor{charliteral}{','});}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00153}00153     std::getline(rawLine, z, \textcolor{charliteral}{','});}
+\DoxyCodeLine{\Hypertarget{_source_8cpp_source_l00154}00154 \}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nneighbor_0',['NNeighbor',['../class_n_neighbor.html',1,'']]]
+  ['exception_0',['Exception',['../class_exception.html',1,'']]]
 ];

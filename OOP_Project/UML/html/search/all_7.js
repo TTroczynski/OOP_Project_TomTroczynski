@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['setlabel_0',['setLabel',['../class_data.html#a51c1200e54d240a389c71247d17d8177',1,'Data']]],
-  ['setx_1',['setX',['../class_data.html#a681a184aa26a20b0a11bf917ae0d465d',1,'Data']]],
-  ['sety_2',['setY',['../class_data.html#aba1ab7b9ebb31c5452c3ea8996ed217a',1,'Data']]],
-  ['setz_3',['setZ',['../class_data.html#ac417a570be334599aef1c8c2ce68b241',1,'Data']]]
+  ['predict_0',['predict',['../class_classifier.html#a0b08843c6cf81847a1ad3261a599c132',1,'Classifier::predict()'],['../class_n_neighbor.html#afa951d140c7aa776fdd79fbac5fbb04c',1,'NNeighbor::predict()'],['../class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa',1,'OtherModel::predict()']]]
 ];

@@ -1,0 +1,103 @@
+\hypertarget{class_other_model}{}\doxysection{Other\+Model Class Reference}
+\label{class_other_model}\index{OtherModel@{OtherModel}}
+Inheritance diagram for Other\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_other_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}{train}} (\mbox{\hyperlink{class_data}{Data}} \&)
+\begin{DoxyCompactList}\small\item\em Virtual function for Training models. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}{predict}} (\mbox{\hyperlink{class_data}{Data}} \&)
+\begin{DoxyCompactList}\small\item\em Virtual function for predicting labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_other_model_a1202f6a85f30cf7127e7cb8d8a7dd880}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_other_model}{Other\+Model}} \&model)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_other_model_8h_source_l00005}{5}} of file \mbox{\hyperlink{_other_model_8h_source}{Other\+Model.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}\label{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}} 
+\index{OtherModel@{OtherModel}!predict@{predict}}
+\index{predict@{predict}!OtherModel@{OtherModel}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily std\+::string Other\+Model\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual function for predicting labels. 
+
+predicts label based on the supplied \mbox{\hyperlink{class_data}{Data}} point by comapring against the entire set
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predicted label of new data point 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_classifier_a0b08843c6cf81847a1ad3261a599c132}{Classifier}}.
+
+
+
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+
+\mbox{\Hypertarget{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}\label{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}} 
+\index{OtherModel@{OtherModel}!train@{train}}
+\index{train@{train}!OtherModel@{OtherModel}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void Other\+Model\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual function for Training models. 
+
+Trains the model with data points consisting of an x,y,z value
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}{Classifier}}.
+
+
+
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_other_model_a1202f6a85f30cf7127e7cb8d8a7dd880}\label{class_other_model_a1202f6a85f30cf7127e7cb8d8a7dd880}} 
+\index{OtherModel@{OtherModel}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!OtherModel@{OtherModel}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{cout,  }\item[{\mbox{\hyperlink{class_other_model}{Other\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tomtr/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/Other\+Model.\+h\item 
+C\+:/\+Users/tomtr/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/Other\+Model.\+cpp\end{DoxyCompactItemize}

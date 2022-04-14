@@ -1,5 +1,5 @@
 \hypertarget{_data_8cpp_source}{}\doxysection{Data.\+cpp}
-\label{_data_8cpp_source}\index{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.cpp@{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.cpp}}
+\label{_data_8cpp_source}\index{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.cpp@{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/Data.cpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}Data.h"{}}}
@@ -56,70 +56,104 @@
 \DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00131}\mbox{\hyperlink{class_data_a2a8cb2280c6714ca587ef1f6ec638826}{00131}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a2a8cb2280c6714ca587ef1f6ec638826}{Data::getMeanDistance}}(std::vector<Data> dataSet, std::string side)}
 \DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00132}00132 \{}
 \DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00133}00133     \textcolor{keywordtype}{double} mean = 0;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00134}00134     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} data : dataSet) \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00135}00135         \textcolor{keywordflow}{if} (data.getLabel() == side) \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00136}00136             mean += data.getDistance(*\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00137}00137         \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00138}00138     \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00139}00139     mean /= (double)dataSet.size();}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00140}00140     \textcolor{keywordflow}{return} mean;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00141}00141 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00142}00142 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00149}\mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{00149}} std::string \mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{Data::getLabel}}()}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00150}00150 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00151}00151     \textcolor{keywordflow}{return} this-\/>label;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00152}00152 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00153}00153 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00161}\mbox{\hyperlink{class_data_a51c1200e54d240a389c71247d17d8177}{00161}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a51c1200e54d240a389c71247d17d8177}{Data::setLabel}}(std::string label)}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00162}00162 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00163}00163     this-\/>label = label;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00164}00164 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00165}00165 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00174}\mbox{\hyperlink{class_data_a782d460ec40a6961f38e50d20bb38097}{00174}} \mbox{\hyperlink{class_data}{Data}}\& \mbox{\hyperlink{class_data_a782d460ec40a6961f38e50d20bb38097}{Data::operator=}}(\mbox{\hyperlink{class_data}{Data}}\& data)}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00175}00175 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00176}00176     \mbox{\hyperlink{class_data}{Data}}* newData = \textcolor{keyword}{new} \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}(data);}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00177}00177     \textcolor{keywordflow}{return} *newData;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00178}00178 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00179}00179 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00186}\mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{00186}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{Data::getY}}()}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00187}00187 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00188}00188     \textcolor{keywordflow}{return} this-\/>y;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00189}00189 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00190}00190 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00197}\mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{00197}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{Data::getZ}}()}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00198}00198 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00199}00199     \textcolor{keywordflow}{return} this-\/>z;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00200}00200 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00201}00201 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00208}\mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{00208}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{Data::getX}}()}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00209}00209 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00210}00210     \textcolor{keywordflow}{return}  this-\/>x;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00211}00211 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00212}00212 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00227}\mbox{\hyperlink{class_data_a158d3612de36eeb8d1b0181e34adcf86}{00227}} std::ofstream\& operator<<(std::ofstream\& fOut, std::vector<Data>\& dataSet)}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00228}00228 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00229}00229     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : dataSet) \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00230}00230         fOut << std::to\_string(element.getX());}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00231}00231         fOut << \textcolor{stringliteral}{"{}, "{}};}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00232}00232         fOut << std::to\_string(element.getY());}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00233}00233         fOut << \textcolor{stringliteral}{"{}, "{}};}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00234}00234         fOut << std::to\_string(element.getZ());}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00235}00235         fOut << \textcolor{stringliteral}{"{}, "{}};}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00236}00236         fOut << element.getLabel();}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00237}00237         fOut << std::endl;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00238}00238     \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00239}00239     \textcolor{keywordflow}{return} fOut;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00240}00240 \}}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00241}00241 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00254}\mbox{\hyperlink{class_data_a9f36d260451faadf8412d253ea46a067}{00254}} std::ostream\& operator<<(std::ostream\& cout, \mbox{\hyperlink{class_data}{Data}}\& dataPoint)}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00255}00255 \{}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00256}00256     cout << dataPoint.\mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{getX}}() << \textcolor{stringliteral}{"{}, "{}} << dataPoint.\mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{getY}}() << \textcolor{stringliteral}{"{}, "{}} << dataPoint.\mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{getZ}}() << \textcolor{stringliteral}{"{}, "{}};}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00257}00257     }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00258}00258  }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00259}00259     }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00260}00260     cout << dataPoint.\mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{getLabel}}() << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00134}00134     \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00136}00136     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} data : dataSet) \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00137}00137         \textcolor{keywordflow}{if} (data.getLabel() == side) \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00138}00138             mean += data.getDistance(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00139}00139             count++;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00140}00140         \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00141}00141     \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00142}00142     mean /= count;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00143}00143     \textcolor{keywordflow}{return} mean;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00144}00144 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00152}\mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{00152}} std::string \mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{Data::getLabel}}()}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00153}00153 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00154}00154     \textcolor{keywordflow}{return} this-\/>label;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00155}00155 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00164}\mbox{\hyperlink{class_data_a51c1200e54d240a389c71247d17d8177}{00164}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a51c1200e54d240a389c71247d17d8177}{Data::setLabel}}(std::string label)}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00165}00165 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00166}00166     this-\/>label = label;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00167}00167 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00177}\mbox{\hyperlink{class_data_a782d460ec40a6961f38e50d20bb38097}{00177}} \mbox{\hyperlink{class_data}{Data}}\& \mbox{\hyperlink{class_data_a782d460ec40a6961f38e50d20bb38097}{Data::operator=}}(\mbox{\hyperlink{class_data}{Data}}\& data)}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00178}00178 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00179}00179     \mbox{\hyperlink{class_data}{Data}}* newData = \textcolor{keyword}{new} \mbox{\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data}}(data);}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00180}00180     \textcolor{keywordflow}{return} *newData;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00181}00181 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00189}\mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{00189}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{Data::getY}}()}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00190}00190 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00191}00191     \textcolor{keywordflow}{return} this-\/>y;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00192}00192 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00200}\mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{00200}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{Data::getZ}}()}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00201}00201 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00202}00202     \textcolor{keywordflow}{return} this-\/>z;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00203}00203 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00211}\mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{00211}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{Data::getX}}()}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00212}00212 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00213}00213     \textcolor{keywordflow}{return}  this-\/>x;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00214}00214 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00230}\mbox{\hyperlink{class_data_a158d3612de36eeb8d1b0181e34adcf86}{00230}} std::ofstream\& operator<<(std::ofstream\& fOut, std::vector<Data>\& dataSet)}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00231}00231 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00232}00232     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : dataSet) \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00233}00233         fOut << std::to\_string(element.getX());}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00234}00234         fOut << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00235}00235         fOut << std::to\_string(element.getY());}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00236}00236         fOut << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00237}00237         fOut << std::to\_string(element.getZ());}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00238}00238         fOut << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00239}00239         fOut << element.getLabel();}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00240}00240         fOut << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00241}00241     \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00242}00242     \textcolor{keywordflow}{return} fOut;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00243}00243 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00257}\mbox{\hyperlink{class_data_a9f36d260451faadf8412d253ea46a067}{00257}} std::ostream\& operator<<(std::ostream\& cout, \mbox{\hyperlink{class_data}{Data}}\& dataPoint)}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00258}00258 \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00259}00259     std::string tempLabel = dataPoint.\mbox{\hyperlink{class_data_ae7aefa06f172f35b91bb6413dbbb61e4}{getLabel}}();}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00260}00260     \textcolor{keywordtype}{int} tempLabelValue = -\/1;}
 \DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00261}00261 }
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00262}00262     \textcolor{keywordflow}{return} cout;}
-\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00263}00263 \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00262}00262     cout << dataPoint.\mbox{\hyperlink{class_data_a44e2e18f067d5a68c3bd91b8ca09dc50}{getX}}() << \textcolor{stringliteral}{"{}, "{}} << dataPoint.\mbox{\hyperlink{class_data_a2c9c989e37d7324537de233ef5b5ae21}{getY}}() << \textcolor{stringliteral}{"{}, "{}} << dataPoint.\mbox{\hyperlink{class_data_a38fa1611aee23647b08a36d02a292567}{getZ}}();}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00264}00264     \textcolor{keywordflow}{if} (tempLabel.empty()) \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00265}00265         \textcolor{keywordflow}{return} cout;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00266}00266     \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00268}00268     cout << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00270}00270     tempLabelValue = std::stoi(tempLabel);}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00272}00272     \textcolor{keywordflow}{switch} (tempLabelValue)}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00273}00273     \{}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00274}00274     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00275}00275         cout << \textcolor{stringliteral}{"{}Face up"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00276}00276         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00277}00277     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00278}00278         cout << \textcolor{stringliteral}{"{}Face down"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00279}00279         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00280}00280     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00281}00281         cout << \textcolor{stringliteral}{"{}Portrait"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00282}00282         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00283}00283     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00284}00284         cout << \textcolor{stringliteral}{"{}Portrait upside down"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00285}00285         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00286}00286     \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00287}00287         cout << \textcolor{stringliteral}{"{}Landscape left"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00288}00288         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00289}00289     \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00290}00290         cout << \textcolor{stringliteral}{"{}Landscape right"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00291}00291         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00292}00292     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00293}00293         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00294}00294     \}}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00295}00295 }
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00296}00296     \textcolor{keywordflow}{return} cout;}
+\DoxyCodeLine{\Hypertarget{_data_8cpp_source_l00297}00297 \}}
 
 \end{DoxyCode}

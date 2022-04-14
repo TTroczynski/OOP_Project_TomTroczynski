@@ -1,27 +1,31 @@
 \hypertarget{_n_neighbor_8h_source}{}\doxysection{NNeighbor.\+h}
-\label{_n_neighbor_8h_source}\index{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.h@{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.h}}
+\label{_n_neighbor_8h_source}\index{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.h@{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.h}}
 \mbox{\hyperlink{_n_neighbor_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00001}00001 }
 \DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00003}00003 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00012}00012 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}Classifier.h"{}}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00014}\mbox{\hyperlink{_n_neighbor_8h_a6d1c996bff41748d6840c43bd803c103}{00014}} \textcolor{preprocessor}{\#define MAXSIDES 6}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00015}00015 \textcolor{preprocessor}{\#define FAILEDTOFIND "{}Failed to match coordinates"{}}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00017}\mbox{\hyperlink{class_n_neighbor}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_n_neighbor}{NNeighbor}} : \textcolor{keyword}{protected} \mbox{\hyperlink{class_classifier}{Classifier}}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00018}00018 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00020}00020     std::vector<Data> dataSet;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00021}00021     std::string evaluateClosest(\mbox{\hyperlink{class_data}{Data}}\&);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00022}00022     std::string evaluateMeans(\mbox{\hyperlink{class_data}{Data}}\&);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00024}00024 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00025}00025     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{train}}(\mbox{\hyperlink{class_data}{Data}}\&);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00026}00026     std::string \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{predict}}(\mbox{\hyperlink{class_data}{Data}}\&);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00027}00027     std::vector<Data> \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{getDataSet}}();}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00028}00028     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}{operator<<}}(std::ostream\&, \mbox{\hyperlink{class_n_neighbor}{NNeighbor}}\& model);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00029}00029 \};}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00017}00017 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00018}00018 \textcolor{preprocessor}{\#include "{}Classifier.h"{}}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}Exception.h"{}}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00021}\mbox{\hyperlink{_n_neighbor_8h_a6d1c996bff41748d6840c43bd803c103}{00021}} \textcolor{preprocessor}{\#define MAXSIDES 6}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00022}00022 \textcolor{preprocessor}{\#define FAILEDTOFINDCLOSEST "{}Failed to find closest vector"{}}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00023}00023 \textcolor{preprocessor}{\#define FAILEDTOFINDMEAN "{}Failed to find closest mean"{}}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00024}00024 \textcolor{preprocessor}{\#define COIN 2}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00026}\mbox{\hyperlink{class_n_neighbor}{00026}} \textcolor{keyword}{class }\mbox{\hyperlink{class_n_neighbor}{NNeighbor}} : \textcolor{keyword}{protected} \mbox{\hyperlink{class_classifier}{Classifier}}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00027}00027 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00028}00028     std::vector<Data> dataSet;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00029}00029     std::string evaluateClosest(\mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00030}00030     std::string evaluateMeans(\mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00032}00032 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00033}00033     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{train}}(\mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00034}00034     std::string \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{predict}}(\mbox{\hyperlink{class_data}{Data}}\&);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00035}00035     std::vector<Data> \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{getDataSet}}();}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00038}00038     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}{operator<<}}(std::ostream\&, \mbox{\hyperlink{class_n_neighbor}{NNeighbor}}\& model);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8h_source_l00039}00039 \};}
 
 \end{DoxyCode}

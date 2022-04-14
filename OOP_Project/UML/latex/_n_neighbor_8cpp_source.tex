@@ -1,91 +1,111 @@
 \hypertarget{_n_neighbor_8cpp_source}{}\doxysection{NNeighbor.\+cpp}
-\label{_n_neighbor_8cpp_source}\index{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.cpp@{C:/Users/developer/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.cpp}}
+\label{_n_neighbor_8cpp_source}\index{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.cpp@{C:/Users/tomtr/source/repos/iDividedBy0/OOP\_Project\_TomTroczynski/OOP\_Project/NNeighbor.cpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_neighbor_8h}{NNeighbor.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00015}00015 std::string NNeighbor::evaluateClosest(\mbox{\hyperlink{class_data}{Data}}\& newData)}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00016}00016 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00017}00017     \textcolor{keywordtype}{int} vectorSize = (int)this-\/>dataSet.size();}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00018}00018     \textcolor{keywordtype}{double} tempCurrentDistance = 0;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00019}00019     \textcolor{keywordtype}{double} tempLeastDistance = DBL\_MAX;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00020}00020     \textcolor{keywordtype}{int} bestMatchIndex = -\/1;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00021}00021     std::string prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00023}00023     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < vectorSize; j++) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00025}00025         tempCurrentDistance = newData.\mbox{\hyperlink{class_data_a045319273c026197bd7018fd471e4992}{getDistance}}(this-\/>dataSet[j]);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00027}00027         \textcolor{keywordflow}{if} (tempLeastDistance == tempCurrentDistance) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00029}00029         \textcolor{keywordflow}{return} FAILEDTOFIND;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00030}00030         \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00031}00031         \textcolor{keywordflow}{if} (tempCurrentDistance < tempLeastDistance) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00033}00033             tempLeastDistance = tempCurrentDistance;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00034}00034             bestMatchIndex = j;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00035}00035         \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00036}00036         }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00037}00037         prediction = this-\/>dataSet[bestMatchIndex].getLabel();}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00038}00038     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00039}00039     \textcolor{keywordflow}{return} prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00040}00040 \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00052}00052 std::string NNeighbor::evaluateMeans(\mbox{\hyperlink{class_data}{Data}}\& newData)}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00053}00053 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00054}00054     \textcolor{keywordtype}{int} vectorSize = (int)this-\/>dataSet.size();}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00055}00055     std::string prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00056}00056     \textcolor{keywordtype}{double} closest = DBL\_MAX;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00057}00057 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00058}00058     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{_n_neighbor_8h_a6d1c996bff41748d6840c43bd803c103}{MAXSIDES}}; i++) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00060}00060         std::string label = std::to\_string(i);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00062}00062         \textcolor{keywordtype}{double} labeledMean = newData.\mbox{\hyperlink{class_data_a2a8cb2280c6714ca587ef1f6ec638826}{getMeanDistance}}(this-\/>dataSet, label);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00064}00064         \textcolor{keywordflow}{if} (labeledMean < closest) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00065}00065 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00066}00066             closest = labeledMean;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00067}00067             prediction = label;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00068}00068         \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00069}00069     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00070}00070     \textcolor{keywordflow}{if} (!prediction.empty()) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00071}00071         \textcolor{keywordflow}{return} prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00072}00072     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00073}00073     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00074}00074         \textcolor{keywordflow}{return} FAILEDTOFIND;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00075}00075     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00076}00076 \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00084}\mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{NNeighbor::train}}(\mbox{\hyperlink{class_data}{Data}}\& newData)}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00085}00085 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00086}00086     this-\/>dataSet.push\_back(newData);}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00087}00087 \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00089}00089 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00099}\mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{00099}} std::string \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{NNeighbor::predict}}(\mbox{\hyperlink{class_data}{Data}}\& newData)}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00100}00100 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00101}00101     std::string prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00102}00102     \textcolor{keywordflow}{if} ((prediction = evaluateClosest(newData)) != FAILEDTOFIND) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00103}00103         \textcolor{keywordflow}{return} prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00104}00104     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00105}00105     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((prediction = evaluateMeans(newData)) != FAILEDTOFIND) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00106}00106         \textcolor{keywordflow}{return} prediction;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00107}00107     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00108}00108     \textcolor{keywordflow}{return} FAILEDTOFIND;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00109}00109 \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00110}00110 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00117}\mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{00117}} std::vector<Data> \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{NNeighbor::getDataSet}}()}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00118}00118 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00119}00119     \textcolor{keywordflow}{return} this-\/>dataSet;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00120}00120 \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00121}00121 }
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00132}\mbox{\hyperlink{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}{00132}} std::ostream\& operator<<(std::ostream\& cout, \mbox{\hyperlink{class_n_neighbor}{NNeighbor}}\& model)}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00133}00133 \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00134}00134     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : model.\mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{getDataSet}}()) \{}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00135}00135         cout << element;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00136}00136     \}}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00137}00137     \textcolor{keywordflow}{return} cout;}
-\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00138}00138 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00016}00016 std::string NNeighbor::evaluateClosest(\mbox{\hyperlink{class_data}{Data}}\& newData)}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00018}00018     \textcolor{keywordtype}{int} vectorSize = (int)this-\/>dataSet.size();}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00019}00019     \textcolor{keywordtype}{double} tempCurrentDistance = 0;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00020}00020     \textcolor{keywordtype}{double} tempLeastDistance = DBL\_MAX;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00021}00021     \textcolor{keywordtype}{int} bestMatchIndex = -\/1;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00022}00022     std::string prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00024}00024     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < vectorSize; j++) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00026}00026         tempCurrentDistance = newData.\mbox{\hyperlink{class_data_a045319273c026197bd7018fd471e4992}{getDistance}}(this-\/>dataSet[j]);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00028}00028         \textcolor{keywordflow}{if} (tempLeastDistance == tempCurrentDistance) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00030}00030             \textcolor{keywordflow}{throw}(\mbox{\hyperlink{class_exception}{Exception}}(FAILEDTOFINDCLOSEST));}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00031}00031         \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00032}00032         \textcolor{keywordflow}{if} (tempCurrentDistance < tempLeastDistance) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00034}00034             tempLeastDistance = tempCurrentDistance;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00035}00035             bestMatchIndex = j;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00037}00037         }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00038}00038         prediction = this-\/>dataSet[bestMatchIndex].getLabel();}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00040}00040     \textcolor{keywordflow}{return} prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00053}00053 std::string NNeighbor::evaluateMeans(\mbox{\hyperlink{class_data}{Data}}\& newData)}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00055}00055     \textcolor{keywordtype}{int} vectorSize = (int)this-\/>dataSet.size();}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00056}00056     std::string prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00057}00057     \textcolor{keywordtype}{double} closest = DBL\_MAX;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00059}00059     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < \mbox{\hyperlink{_n_neighbor_8h_a6d1c996bff41748d6840c43bd803c103}{MAXSIDES}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00061}00061         std::string label = std::to\_string(i);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00063}00063         \textcolor{keywordtype}{double} labeledMean = newData.\mbox{\hyperlink{class_data_a2a8cb2280c6714ca587ef1f6ec638826}{getMeanDistance}}(this-\/>dataSet, label);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00065}00065         \textcolor{keywordflow}{if} (labeledMean == closest) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00067}00067             \textcolor{keywordflow}{if} (time(NULL) \% COIN) \{                                \textcolor{comment}{//if two means are equidistant, flip a coin, choose one at random.}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00068}00068                 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00069}00069                 prediction = labeledMean;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00070}00070             \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00073}00073         \textcolor{keywordflow}{if} (labeledMean < closest) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00075}00075             closest = labeledMean;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00076}00076             prediction = label;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00077}00077         \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00079}00079     \textcolor{keywordflow}{if} (!prediction.empty()) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00080}00080         \textcolor{keywordflow}{return} prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00082}00082     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00083}00083         \textcolor{keywordflow}{throw}(\mbox{\hyperlink{class_exception}{Exception}}(FAILEDTOFINDMEAN));}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00085}00085 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00093}\mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{00093}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_neighbor_a3bbe089680aceec39241c54fc92e4552}{NNeighbor::train}}(\mbox{\hyperlink{class_data}{Data}}\& newData)}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00094}00094 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00095}00095     this-\/>dataSet.push\_back(newData);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00096}00096 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00108}\mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{00108}} std::string \mbox{\hyperlink{class_n_neighbor_afa951d140c7aa776fdd79fbac5fbb04c}{NNeighbor::predict}}(\mbox{\hyperlink{class_data}{Data}}\& newData)}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00109}00109 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00110}00110     std::string prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00112}00112     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00113}00113         prediction = evaluateClosest(newData);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00114}00114         \textcolor{keywordflow}{return} prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00116}00116     \textcolor{keywordflow}{catch} (\mbox{\hyperlink{class_exception}{Exception}}\& e) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00117}00117         std::cout << \textcolor{stringliteral}{"{}Error: "{}} << e.\mbox{\hyperlink{class_exception_abe7f2f891b65e118349509fd751b578e}{getFault}}() << std::endl;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00118}00118         std::cout << \textcolor{stringliteral}{"{}Evaluating mean distances for this vector: "{}} << newData  << std::endl;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00119}00119     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00120}00120     }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00121}00121     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00122}00122         prediction = evaluateMeans(newData);}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00123}00123         \textcolor{keywordflow}{return} prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00125}00125     \textcolor{keywordflow}{catch} (\mbox{\hyperlink{class_exception}{Exception}}\& e) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00126}00126         std::cout << \textcolor{stringliteral}{"{}Error: "{}} << e.\mbox{\hyperlink{class_exception_abe7f2f891b65e118349509fd751b578e}{getFault}}() << std::endl;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00128}00128     \textcolor{keywordflow}{return} prediction;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00129}00129 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00137}\mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{00137}} std::vector<Data> \mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{NNeighbor::getDataSet}}()}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00138}00138 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00139}00139     \textcolor{keywordflow}{return} this-\/>dataSet;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00140}00140 \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00152}\mbox{\hyperlink{class_n_neighbor_a4fdc54c1083cc7be151f1108a4adc317}{00152}} std::ostream\& operator<<(std::ostream\& cout, \mbox{\hyperlink{class_n_neighbor}{NNeighbor}}\& model)}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00153}00153 \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00154}00154     \textcolor{keywordflow}{for} (\mbox{\hyperlink{class_data}{Data}} element : model.\mbox{\hyperlink{class_n_neighbor_aad76cafd10ce9a54c0618f85556d60e3}{getDataSet}}()) \{}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00155}00155         cout << element;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00156}00156     \}}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00157}00157     \textcolor{keywordflow}{return} cout;}
+\DoxyCodeLine{\Hypertarget{_n_neighbor_8cpp_source_l00158}00158 \}}
 
 \end{DoxyCode}

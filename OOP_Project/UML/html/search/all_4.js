@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nneighbor_0',['NNeighbor',['../class_n_neighbor.html',1,'']]],
-  ['nneighbor_2eh_1',['NNeighbor.h',['../_n_neighbor_8h.html',1,'']]]
+  ['maxsides_0',['MAXSIDES',['../_n_neighbor_8h.html#a6d1c996bff41748d6840c43bd803c103',1,'NNeighbor.h']]]
 ];

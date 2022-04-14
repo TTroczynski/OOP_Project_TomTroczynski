@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OOP_Nearest_Neighbor_ML_Algorithm: C:/Users/developer/source/repos/iDividedBy0/OOP_Project_TomTroczynski/OOP_Project/Data.cpp Source File</title>
+<title>OOP_Nearest_Neighbor_ML_Algorithm: C:/Users/tomtr/source/repos/iDividedBy0/OOP_Project_TomTroczynski/OOP_Project/Data.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Capture.JPG"/></td>
   <td id="projectalign">
    <div id="projectname">OOP_Nearest_Neighbor_ML_Algorithm
    </div>
@@ -141,90 +140,124 @@ $(document).ready(function(){initNavTree('_data_8cpp_source.html',''); initResiz
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_data.html#a2a8cb2280c6714ca587ef1f6ec638826">  131</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a2a8cb2280c6714ca587ef1f6ec638826">Data::getMeanDistance</a>(std::vector&lt;Data&gt; dataSet, std::string side)</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">double</span> mean = 0;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="class_data.html">Data</a> data : dataSet) {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (data.getLabel() == side) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            mean += data.getDistance(*<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    mean /= (double)dataSet.size();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">return</span> mean;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">  149</a></span>std::string <a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">Data::getLabel</a>()</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> this-&gt;label;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_data.html#a51c1200e54d240a389c71247d17d8177">  161</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_data.html#a51c1200e54d240a389c71247d17d8177">Data::setLabel</a>(std::string label)</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    this-&gt;label = label;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_data.html#a782d460ec40a6961f38e50d20bb38097">  174</a></span><a class="code hl_class" href="class_data.html">Data</a>&amp; <a class="code hl_function" href="class_data.html#a782d460ec40a6961f38e50d20bb38097">Data::operator=</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; data)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>{</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_class" href="class_data.html">Data</a>* newData = <span class="keyword">new</span> <a class="code hl_function" href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data</a>(data);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> *newData;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">  186</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">Data::getY</a>()</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span> this-&gt;y;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="class_data.html#a38fa1611aee23647b08a36d02a292567">  197</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a38fa1611aee23647b08a36d02a292567">Data::getZ</a>()</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">return</span> this-&gt;z;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">  208</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">Data::getX</a>()</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>{</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">return</span>  this-&gt;x;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_data.html#a158d3612de36eeb8d1b0181e34adcf86">  227</a></span>std::ofstream&amp; operator&lt;&lt;(std::ofstream&amp; fOut, std::vector&lt;Data&gt;&amp; dataSet)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>{</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="class_data.html">Data</a> element : dataSet) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        fOut &lt;&lt; std::to_string(element.getX());</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        fOut &lt;&lt; std::to_string(element.getY());</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        fOut &lt;&lt; std::to_string(element.getZ());</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        fOut &lt;&lt; element.getLabel();</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        fOut &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">return</span> fOut;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_data.html#a9f36d260451faadf8412d253ea46a067">  254</a></span>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; cout, <a class="code hl_class" href="class_data.html">Data</a>&amp; dataPoint)</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>{</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    cout &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">getX</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">getY</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a38fa1611aee23647b08a36d02a292567">getZ</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    cout &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">getLabel</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="class_data.html">Data</a> data : dataSet) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span> (data.getLabel() == side) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            mean += data.getDistance(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            count++;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    mean /= count;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span> mean;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">  152</a></span>std::string <a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">Data::getLabel</a>()</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>{</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">return</span> this-&gt;label;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_data.html#a51c1200e54d240a389c71247d17d8177">  164</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_data.html#a51c1200e54d240a389c71247d17d8177">Data::setLabel</a>(std::string label)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>{</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    this-&gt;label = label;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_data.html#a782d460ec40a6961f38e50d20bb38097">  177</a></span><a class="code hl_class" href="class_data.html">Data</a>&amp; <a class="code hl_function" href="class_data.html#a782d460ec40a6961f38e50d20bb38097">Data::operator=</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; data)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_class" href="class_data.html">Data</a>* newData = <span class="keyword">new</span> <a class="code hl_function" href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data</a>(data);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">return</span> *newData;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">  189</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">Data::getY</a>()</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>{</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">return</span> this-&gt;y;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="class_data.html#a38fa1611aee23647b08a36d02a292567">  200</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a38fa1611aee23647b08a36d02a292567">Data::getZ</a>()</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>{</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> this-&gt;z;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">  211</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">Data::getX</a>()</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>{</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span>  this-&gt;x;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="class_data.html#a158d3612de36eeb8d1b0181e34adcf86">  230</a></span>std::ofstream&amp; operator&lt;&lt;(std::ofstream&amp; fOut, std::vector&lt;Data&gt;&amp; dataSet)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>{</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="class_data.html">Data</a> element : dataSet) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        fOut &lt;&lt; std::to_string(element.getX());</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        fOut &lt;&lt; std::to_string(element.getY());</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        fOut &lt;&lt; std::to_string(element.getZ());</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        fOut &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        fOut &lt;&lt; element.getLabel();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        fOut &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">return</span> fOut;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="class_data.html#a9f36d260451faadf8412d253ea46a067">  257</a></span>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; cout, <a class="code hl_class" href="class_data.html">Data</a>&amp; dataPoint)</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>{</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    std::string tempLabel = dataPoint.<a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">getLabel</a>();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">int</span> tempLabelValue = -1;</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">return</span> cout;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    cout &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">getX</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">getY</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; dataPoint.<a class="code hl_function" href="class_data.html#a38fa1611aee23647b08a36d02a292567">getZ</a>();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">if</span> (tempLabel.empty()) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">return</span> cout;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    cout &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    tempLabelValue = std::stoi(tempLabel);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">switch</span> (tempLabelValue)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        cout &lt;&lt; <span class="stringliteral">&quot;Face up&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        cout &lt;&lt; <span class="stringliteral">&quot;Face down&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        cout &lt;&lt; <span class="stringliteral">&quot;Portrait&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        cout &lt;&lt; <span class="stringliteral">&quot;Portrait upside down&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        cout &lt;&lt; <span class="stringliteral">&quot;Landscape left&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        cout &lt;&lt; <span class="stringliteral">&quot;Landscape right&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">return</span> cout;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>}</div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00019">Data.h:20</a></div></div>
 <div class="ttc" id="aclass_data_html_a045319273c026197bd7018fd471e4992"><div class="ttname"><a href="class_data.html#a045319273c026197bd7018fd471e4992">Data::getDistance</a></div><div class="ttdeci">double getDistance(Data &amp;)</div><div class="ttdoc">Retrieves distance from a point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00114">Data.cpp:114</a></div></div>
 <div class="ttc" id="aclass_data_html_a2a8cb2280c6714ca587ef1f6ec638826"><div class="ttname"><a href="class_data.html#a2a8cb2280c6714ca587ef1f6ec638826">Data::getMeanDistance</a></div><div class="ttdeci">double getMeanDistance(std::vector&lt; Data &gt;, std::string)</div><div class="ttdoc">Retrieves mean distance from a point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00131">Data.cpp:131</a></div></div>
-<div class="ttc" id="aclass_data_html_a2c9c989e37d7324537de233ef5b5ae21"><div class="ttname"><a href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">Data::getY</a></div><div class="ttdeci">double getY()</div><div class="ttdoc">Returns the Y value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00186">Data.cpp:186</a></div></div>
-<div class="ttc" id="aclass_data_html_a38fa1611aee23647b08a36d02a292567"><div class="ttname"><a href="class_data.html#a38fa1611aee23647b08a36d02a292567">Data::getZ</a></div><div class="ttdeci">double getZ()</div><div class="ttdoc">Returns the Z value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00197">Data.cpp:197</a></div></div>
-<div class="ttc" id="aclass_data_html_a44e2e18f067d5a68c3bd91b8ca09dc50"><div class="ttname"><a href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">Data::getX</a></div><div class="ttdeci">double getX()</div><div class="ttdoc">Returns the X value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00208">Data.cpp:208</a></div></div>
-<div class="ttc" id="aclass_data_html_a51c1200e54d240a389c71247d17d8177"><div class="ttname"><a href="class_data.html#a51c1200e54d240a389c71247d17d8177">Data::setLabel</a></div><div class="ttdeci">void setLabel(std::string)</div><div class="ttdoc">Sets the label of this Data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00161">Data.cpp:161</a></div></div>
+<div class="ttc" id="aclass_data_html_a2c9c989e37d7324537de233ef5b5ae21"><div class="ttname"><a href="class_data.html#a2c9c989e37d7324537de233ef5b5ae21">Data::getY</a></div><div class="ttdeci">double getY()</div><div class="ttdoc">Returns the Y value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00189">Data.cpp:189</a></div></div>
+<div class="ttc" id="aclass_data_html_a38fa1611aee23647b08a36d02a292567"><div class="ttname"><a href="class_data.html#a38fa1611aee23647b08a36d02a292567">Data::getZ</a></div><div class="ttdeci">double getZ()</div><div class="ttdoc">Returns the Z value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00200">Data.cpp:200</a></div></div>
+<div class="ttc" id="aclass_data_html_a44e2e18f067d5a68c3bd91b8ca09dc50"><div class="ttname"><a href="class_data.html#a44e2e18f067d5a68c3bd91b8ca09dc50">Data::getX</a></div><div class="ttdeci">double getX()</div><div class="ttdoc">Returns the X value of this data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00211">Data.cpp:211</a></div></div>
+<div class="ttc" id="aclass_data_html_a51c1200e54d240a389c71247d17d8177"><div class="ttname"><a href="class_data.html#a51c1200e54d240a389c71247d17d8177">Data::setLabel</a></div><div class="ttdeci">void setLabel(std::string)</div><div class="ttdoc">Sets the label of this Data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00164">Data.cpp:164</a></div></div>
 <div class="ttc" id="aclass_data_html_a681a184aa26a20b0a11bf917ae0d465d"><div class="ttname"><a href="class_data.html#a681a184aa26a20b0a11bf917ae0d465d">Data::setX</a></div><div class="ttdeci">void setX(double)</div><div class="ttdoc">Set the Data object's X value.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00073">Data.cpp:73</a></div></div>
-<div class="ttc" id="aclass_data_html_a782d460ec40a6961f38e50d20bb38097"><div class="ttname"><a href="class_data.html#a782d460ec40a6961f38e50d20bb38097">Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(Data &amp;data)</div><div class="ttdoc">Overloads the = operator.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00174">Data.cpp:174</a></div></div>
+<div class="ttc" id="aclass_data_html_a782d460ec40a6961f38e50d20bb38097"><div class="ttname"><a href="class_data.html#a782d460ec40a6961f38e50d20bb38097">Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(Data &amp;data)</div><div class="ttdoc">Overloads the = operator.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00177">Data.cpp:177</a></div></div>
 <div class="ttc" id="aclass_data_html_aba1ab7b9ebb31c5452c3ea8996ed217a"><div class="ttname"><a href="class_data.html#aba1ab7b9ebb31c5452c3ea8996ed217a">Data::setY</a></div><div class="ttdeci">void setY(double)</div><div class="ttdoc">Set the Data object's Y value.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00084">Data.cpp:84</a></div></div>
 <div class="ttc" id="aclass_data_html_ac417a570be334599aef1c8c2ce68b241"><div class="ttname"><a href="class_data.html#ac417a570be334599aef1c8c2ce68b241">Data::setZ</a></div><div class="ttdeci">void setZ(double)</div><div class="ttdoc">Set the Data object's Z value.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00096">Data.cpp:96</a></div></div>
-<div class="ttc" id="aclass_data_html_ae7aefa06f172f35b91bb6413dbbb61e4"><div class="ttname"><a href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">Data::getLabel</a></div><div class="ttdeci">std::string getLabel()</div><div class="ttdoc">Returns the label of this Data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00149">Data.cpp:149</a></div></div>
+<div class="ttc" id="aclass_data_html_ae7aefa06f172f35b91bb6413dbbb61e4"><div class="ttname"><a href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">Data::getLabel</a></div><div class="ttdeci">std::string getLabel()</div><div class="ttdoc">Returns the label of this Data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00152">Data.cpp:152</a></div></div>
 <div class="ttc" id="aclass_data_html_af11f741cb7f587e2e495452a8905a22a"><div class="ttname"><a href="class_data.html#af11f741cb7f587e2e495452a8905a22a">Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00009">Data.cpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a class="el" href="dir_0c14b54d6ba4a089e0fce99e0a8066e8.html">iDividedBy0</a></li><li class="navelem"><a class="el" href="dir_ab1b8f7711c10e1c65d55efcccadef09.html">OOP_Project_TomTroczynski</a></li><li class="navelem"><a class="el" href="dir_aabbf95a85cc9a64af9edc1fa7fbd0f5.html">OOP_Project</a></li><li class="navelem"><b>Data.cpp</b></li>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_83e64706ce7506cb9d2dd5c91cf788b8.html">tomtr</a></li><li class="navelem"><a class="el" href="dir_3085a2883b282ec9fc46eda618b3cdca.html">source</a></li><li class="navelem"><a class="el" href="dir_a9cc46622d74165e65ff0c07c612f858.html">repos</a></li><li class="navelem"><a class="el" href="dir_8e8e84bc52d1700dd79915a7adc59601.html">iDividedBy0</a></li><li class="navelem"><a class="el" href="dir_1bc2cfbde96bf69deb79c8ec7927d14b.html">OOP_Project_TomTroczynski</a></li><li class="navelem"><a class="el" href="dir_cfcf0d27a7cd02fa4dc7d60855fbe6fc.html">OOP_Project</a></li><li class="navelem"><b>Data.cpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

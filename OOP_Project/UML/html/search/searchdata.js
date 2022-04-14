@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "cdgmnopst",
-  1: "cdn",
+  0: "cdegmnopst",
+  1: "cdeno",
   2: "n",
   3: "dgopst",
   4: "o",
