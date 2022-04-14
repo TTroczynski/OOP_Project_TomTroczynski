@@ -1,0 +1,75 @@
+\hypertarget{class_other_classifier}{}\doxysection{Other\+Classifier Class Reference}
+\label{class_other_classifier}\index{OtherClassifier@{OtherClassifier}}
+Inheritance diagram for Other\+Classifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_other_classifier}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_other_classifier_aa545e14e3b226499ac2e09e390e03988}{train}} (\mbox{\hyperlink{class_data}{Data}} \&)=0
+\begin{DoxyCompactList}\small\item\em Virtual function for Training models. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_other_classifier_ae30e1e7fe633179eac9bac88e46da360}{predict}} (\mbox{\hyperlink{class_data}{Data}} \&)=0
+\begin{DoxyCompactList}\small\item\em Virtual function for predicting labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_other_classifier_8h_source_l00005}{5}} of file \mbox{\hyperlink{_other_classifier_8h_source}{Other\+Classifier.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_other_classifier_ae30e1e7fe633179eac9bac88e46da360}\label{class_other_classifier_ae30e1e7fe633179eac9bac88e46da360}} 
+\index{OtherClassifier@{OtherClassifier}!predict@{predict}}
+\index{predict@{predict}!OtherClassifier@{OtherClassifier}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily virtual std\+::string Other\+Classifier\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Virtual function for predicting labels. 
+
+predicts label based on the supplied \mbox{\hyperlink{class_data}{Data}} point by comapring against the entire set
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predicted label of new data point 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}{Other\+Model}}.
+
+\mbox{\Hypertarget{class_other_classifier_aa545e14e3b226499ac2e09e390e03988}\label{class_other_classifier_aa545e14e3b226499ac2e09e390e03988}} 
+\index{OtherClassifier@{OtherClassifier}!train@{train}}
+\index{train@{train}!OtherClassifier@{OtherClassifier}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily virtual void Other\+Classifier\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Virtual function for Training models. 
+
+Trains the model with data points consisting of an x,y,z value
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}{Other\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tomtr/source/repos/i\+Divided\+By0/\+OOP\+\_\+\+Project\+\_\+\+Tom\+Troczynski/\+OOP\+\_\+\+Project/Other\+Classifier.\+h\end{DoxyCompactItemize}

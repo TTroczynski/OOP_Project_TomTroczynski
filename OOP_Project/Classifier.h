@@ -1,5 +1,4 @@
 #pragma once
-#include "Data.h"
 
 //! Classifier Class
 /*!
@@ -10,7 +9,9 @@
 * functions.
 */
 
-class Classifier : public Data
+#include "Data.h"
+
+class Classifier
 {
 
 protected:

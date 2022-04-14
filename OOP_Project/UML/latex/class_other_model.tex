@@ -3,28 +3,28 @@
 Inheritance diagram for Other\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_other_model}
+\includegraphics[height=2.000000cm]{class_other_model}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}{train}} (\mbox{\hyperlink{class_data}{Data}} \&)
-\begin{DoxyCompactList}\small\item\em Virtual function for Training models. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds the data point to the model. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_other_model_ac4f973862104bb7adaf3a653204d0ffa}{predict}} (\mbox{\hyperlink{class_data}{Data}} \&)
-\begin{DoxyCompactList}\small\item\em Virtual function for predicting labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Makes a prediction based on the modeled data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_other_model_a1202f6a85f30cf7127e7cb8d8a7dd880}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_other_model}{Other\+Model}} \&model)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{_other_model_8h_source_l00005}{5}} of file \mbox{\hyperlink{_other_model_8h_source}{Other\+Model.\+h}}.
+Definition at line \mbox{\hyperlink{_other_model_8h_source_l00003}{3}} of file \mbox{\hyperlink{_other_model_8h_source}{Other\+Model.\+h}}.
 
 
 
@@ -33,41 +33,44 @@ Definition at line \mbox{\hyperlink{_other_model_8h_source_l00005}{5}} of file \
 \index{OtherModel@{OtherModel}!predict@{predict}}
 \index{predict@{predict}!OtherModel@{OtherModel}}
 \doxysubsubsection{\texorpdfstring{predict()}{predict()}}
-{\footnotesize\ttfamily std\+::string Other\+Model\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::string Other\+Model\+::predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{new\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Virtual function for predicting labels. 
+Makes a prediction based on the modeled data. 
 
-predicts label based on the supplied \mbox{\hyperlink{class_data}{Data}} point by comapring against the entire set
+Returns the label of the closest matching point or closest means label. Each mean is calculated using a sum of all distances of points with each label. \begin{DoxySeeAlso}{See also}
+evaluate\+Closest() 
 
+evaluate\+Means()
+\end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em \mbox{\hyperlink{class_data}{Data}}} & object reference\\
+{\em \mbox{\hyperlink{class_data}{Data}}} & object reference \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-predicted label of new data point 
+predicted label 
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_classifier_a0b08843c6cf81847a1ad3261a599c132}{Classifier}}.
+Implements \mbox{\hyperlink{class_other_classifier_ae30e1e7fe633179eac9bac88e46da360}{Other\+Classifier}}.
 
 
 
-Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
 
 \mbox{\Hypertarget{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}\label{class_other_model_a00e7cf244bf52dbf24f5077b41a7d773}} 
 \index{OtherModel@{OtherModel}!train@{train}}
 \index{train@{train}!OtherModel@{OtherModel}}
 \doxysubsubsection{\texorpdfstring{train()}{train()}}
-{\footnotesize\ttfamily void Other\+Model\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Other\+Model\+::train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_data}{Data}} \&}]{new\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Virtual function for Training models. 
+Adds the data point to the model. 
 
-Trains the model with data points consisting of an x,y,z value
+Adds data point to model so that it can be used to predict unknown (unlabeled) points
 
 
 \begin{DoxyParams}{Parameters}
@@ -76,11 +79,11 @@ Trains the model with data points consisting of an x,y,z value
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{class_classifier_a306bbcd81d9c10110f4da50204d6d52d}{Classifier}}.
+Implements \mbox{\hyperlink{class_other_classifier_aa545e14e3b226499ac2e09e390e03988}{Other\+Classifier}}.
 
 
 
-Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
 
 
 
@@ -93,7 +96,24 @@ Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00003}{3}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
+Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. 
+
+Makes printing \mbox{\hyperlink{class_n_neighbor}{NNeighbor}} objects with the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator possible. Calls get\+Data\+Set() \begin{DoxySeeAlso}{See also}
+get\+Data\+Set()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & object reference \\
+\hline
+{\em \mbox{\hyperlink{class_other_model}{Other\+Model}}} & object reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_other_model_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_other_model_8cpp_source}{Other\+Model.\+cpp}}.
 
 
 

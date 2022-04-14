@@ -88,27 +88,28 @@ $(document).ready(function(){initNavTree('_other_model_8cpp_source.html',''); in
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;OtherModel.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">    3</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; newData)</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;training OtherModel with new vector&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>}</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">    8</a></span>std::string <a class="code hl_function" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; newData)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Predicting new vectors label&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">return</span> newData.<a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">getLabel</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; cout, <a class="code hl_class" href="class_other_model.html">OtherModel</a>&amp; model)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    cout &lt;&lt; <span class="stringliteral">&quot;Printing this OtherModel object with &lt;&lt; operator&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> cout;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; newData)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;training OtherModel with new vector&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">   26</a></span>std::string <a class="code hl_function" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp; newData)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Predicting new vectors label&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> newData.<a class="code hl_function" href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">getLabel</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_other_model.html#a1202f6a85f30cf7127e7cb8d8a7dd880">   43</a></span>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; cout, <a class="code hl_class" href="class_other_model.html">OtherModel</a>&amp; model)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    cout &lt;&lt; <span class="stringliteral">&quot;Printing this OtherModel object with &lt;&lt; operator&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> cout;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00019">Data.h:20</a></div></div>
 <div class="ttc" id="aclass_data_html_ae7aefa06f172f35b91bb6413dbbb61e4"><div class="ttname"><a href="class_data.html#ae7aefa06f172f35b91bb6413dbbb61e4">Data::getLabel</a></div><div class="ttdeci">std::string getLabel()</div><div class="ttdoc">Returns the label of this Data point.</div><div class="ttdef"><b>Definition:</b> <a href="_data_8cpp_source.html#l00152">Data.cpp:152</a></div></div>
-<div class="ttc" id="aclass_other_model_html"><div class="ttname"><a href="class_other_model.html">OtherModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8h_source.html#l00005">OtherModel.h:6</a></div></div>
-<div class="ttc" id="aclass_other_model_html_a00e7cf244bf52dbf24f5077b41a7d773"><div class="ttname"><a href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a></div><div class="ttdeci">void train(Data &amp;)</div><div class="ttdoc">Virtual function for Training models.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00003">OtherModel.cpp:3</a></div></div>
-<div class="ttc" id="aclass_other_model_html_ac4f973862104bb7adaf3a653204d0ffa"><div class="ttname"><a href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a></div><div class="ttdeci">std::string predict(Data &amp;)</div><div class="ttdoc">Virtual function for predicting labels.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00008">OtherModel.cpp:8</a></div></div>
+<div class="ttc" id="aclass_other_model_html"><div class="ttname"><a href="class_other_model.html">OtherModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8h_source.html#l00003">OtherModel.h:4</a></div></div>
+<div class="ttc" id="aclass_other_model_html_a00e7cf244bf52dbf24f5077b41a7d773"><div class="ttname"><a href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a></div><div class="ttdeci">void train(Data &amp;)</div><div class="ttdoc">Adds the data point to the model.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00010">OtherModel.cpp:10</a></div></div>
+<div class="ttc" id="aclass_other_model_html_ac4f973862104bb7adaf3a653204d0ffa"><div class="ttname"><a href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a></div><div class="ttdeci">std::string predict(Data &amp;)</div><div class="ttdoc">Makes a prediction based on the modeled data.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00026">OtherModel.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

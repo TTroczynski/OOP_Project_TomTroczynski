@@ -143,6 +143,7 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="NNeighbor.cpp" />
+    <ClCompile Include="OtherClassifier.cpp" />
     <ClCompile Include="OtherModel.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Data.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="NNeighbor.h" />
+    <ClInclude Include="OtherClassifier.h" />
     <ClInclude Include="OtherModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

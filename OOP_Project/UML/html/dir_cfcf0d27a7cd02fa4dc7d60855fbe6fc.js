@@ -8,6 +8,8 @@ var dir_cfcf0d27a7cd02fa4dc7d60855fbe6fc =
     [ "Exception.h", "_exception_8h_source.html", null ],
     [ "NNeighbor.cpp", "_n_neighbor_8cpp_source.html", null ],
     [ "NNeighbor.h", "_n_neighbor_8h.html", "_n_neighbor_8h" ],
+    [ "OtherClassifier.cpp", "_other_classifier_8cpp_source.html", null ],
+    [ "OtherClassifier.h", "_other_classifier_8h_source.html", null ],
     [ "OtherModel.cpp", "_other_model_8cpp_source.html", null ],
     [ "OtherModel.h", "_other_model_8h_source.html", null ],
     [ "Source.cpp", "_source_8cpp_source.html", null ]

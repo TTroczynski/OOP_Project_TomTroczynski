@@ -87,26 +87,23 @@ $(document).ready(function(){initNavTree('_other_model_8h_source.html',''); init
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Classifier.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_other_model.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_other_model.html">OtherModel</a> : <span class="keyword">protected</span> <a class="code hl_class" href="class_classifier.html">Classifier</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;OtherClassifier.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_other_model.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="class_other_model.html">OtherModel</a> : <span class="keyword">protected</span> <a class="code hl_class" href="class_other_classifier.html">OtherClassifier</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    std::string <a class="code hl_function" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_other_model.html#a1202f6a85f30cf7127e7cb8d8a7dd880">operator&lt;&lt;</a>(std::ostream&amp;, <a class="code hl_class" href="class_other_model.html">OtherModel</a>&amp; model);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::string <a class="code hl_function" href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, <a class="code hl_class" href="class_other_model.html">OtherModel</a>&amp; model);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="ttc" id="aclass_classifier_html"><div class="ttname"><a href="class_classifier.html">Classifier</a></div><div class="ttdoc">Classifier Class.</div><div class="ttdef"><b>Definition:</b> <a href="_classifier_8h_source.html#l00013">Classifier.h:14</a></div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00019">Data.h:20</a></div></div>
-<div class="ttc" id="aclass_other_model_html"><div class="ttname"><a href="class_other_model.html">OtherModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8h_source.html#l00005">OtherModel.h:6</a></div></div>
-<div class="ttc" id="aclass_other_model_html_a00e7cf244bf52dbf24f5077b41a7d773"><div class="ttname"><a href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a></div><div class="ttdeci">void train(Data &amp;)</div><div class="ttdoc">Virtual function for Training models.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00003">OtherModel.cpp:3</a></div></div>
-<div class="ttc" id="aclass_other_model_html_ac4f973862104bb7adaf3a653204d0ffa"><div class="ttname"><a href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a></div><div class="ttdeci">std::string predict(Data &amp;)</div><div class="ttdoc">Virtual function for predicting labels.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00008">OtherModel.cpp:8</a></div></div>
+<div class="ttc" id="aclass_other_classifier_html"><div class="ttname"><a href="class_other_classifier.html">OtherClassifier</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_classifier_8h_source.html#l00005">OtherClassifier.h:6</a></div></div>
+<div class="ttc" id="aclass_other_model_html"><div class="ttname"><a href="class_other_model.html">OtherModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8h_source.html#l00003">OtherModel.h:4</a></div></div>
+<div class="ttc" id="aclass_other_model_html_a00e7cf244bf52dbf24f5077b41a7d773"><div class="ttname"><a href="class_other_model.html#a00e7cf244bf52dbf24f5077b41a7d773">OtherModel::train</a></div><div class="ttdeci">void train(Data &amp;)</div><div class="ttdoc">Adds the data point to the model.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00010">OtherModel.cpp:10</a></div></div>
+<div class="ttc" id="aclass_other_model_html_a1202f6a85f30cf7127e7cb8d8a7dd880"><div class="ttname"><a href="class_other_model.html#a1202f6a85f30cf7127e7cb8d8a7dd880">OtherModel::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;, OtherModel &amp;model)</div><div class="ttdoc">Overloads the &lt;&lt; operator.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00043">OtherModel.cpp:43</a></div></div>
+<div class="ttc" id="aclass_other_model_html_ac4f973862104bb7adaf3a653204d0ffa"><div class="ttname"><a href="class_other_model.html#ac4f973862104bb7adaf3a653204d0ffa">OtherModel::predict</a></div><div class="ttdeci">std::string predict(Data &amp;)</div><div class="ttdoc">Makes a prediction based on the modeled data.</div><div class="ttdef"><b>Definition:</b> <a href="_other_model_8cpp_source.html#l00026">OtherModel.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

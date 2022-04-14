@@ -1,4 +1,4 @@
-
+#pragma once
 //! NNeighbor Class
 /*!
 * A machine learning model that inherits from the Classifier class.
@@ -14,7 +14,7 @@
 * @see predict()
 * behaviours from the Classifier class.
 */
-#pragma once
+
 #include "Classifier.h"
 #include "Exception.h"
 

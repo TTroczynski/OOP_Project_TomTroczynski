@@ -1,11 +1,7 @@
 #pragma once
-#include "Classifier.h"
-#include <iostream>
-
-class OtherModel : protected Classifier
+#include "OtherClassifier.h"
+class OtherModel : protected OtherClassifier
 {
-
-
 public:
 
 	void train(Data&);

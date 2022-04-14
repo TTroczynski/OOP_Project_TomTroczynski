@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OOP_Nearest_Neighbor_ML_Algorithm: C:/Users/tomtr/source/repos/iDividedBy0/OOP_Project_TomTroczynski/OOP_Project/Classifier.h Source File</title>
+<title>OOP_Nearest_Neighbor_ML_Algorithm: C:/Users/tomtr/source/repos/iDividedBy0/OOP_Project_TomTroczynski/OOP_Project/OtherClassifier.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_classifier_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('_other_classifier_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,33 +83,31 @@ $(document).ready(function(){initNavTree('_classifier_8h_source.html',''); initR
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Classifier.h</div></div>
+  <div class="headertitle"><div class="title">OtherClassifier.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Data.h&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;Data.h&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_classifier.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_classifier.html">Classifier</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_classifier.html#a306bbcd81d9c10110f4da50204d6d52d">   24</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_classifier.html#a306bbcd81d9c10110f4da50204d6d52d">train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;) = 0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_classifier.html#a0b08843c6cf81847a1ad3261a599c132">   34</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_classifier.html#a0b08843c6cf81847a1ad3261a599c132">predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;) = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="ttc" id="aclass_classifier_html"><div class="ttname"><a href="class_classifier.html">Classifier</a></div><div class="ttdoc">Classifier Class.</div><div class="ttdef"><b>Definition:</b> <a href="_classifier_8h_source.html#l00014">Classifier.h:15</a></div></div>
-<div class="ttc" id="aclass_classifier_html_a0b08843c6cf81847a1ad3261a599c132"><div class="ttname"><a href="class_classifier.html#a0b08843c6cf81847a1ad3261a599c132">Classifier::predict</a></div><div class="ttdeci">virtual std::string predict(Data &amp;)=0</div><div class="ttdoc">Virtual function for predicting labels.</div></div>
-<div class="ttc" id="aclass_classifier_html_a306bbcd81d9c10110f4da50204d6d52d"><div class="ttname"><a href="class_classifier.html#a306bbcd81d9c10110f4da50204d6d52d">Classifier::train</a></div><div class="ttdeci">virtual void train(Data &amp;)=0</div><div class="ttdoc">Virtual function for Training models.</div></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_other_classifier.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_other_classifier.html">OtherClassifier</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_other_classifier.html#aa545e14e3b226499ac2e09e390e03988">   14</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_other_classifier.html#aa545e14e3b226499ac2e09e390e03988">train</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;) = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_other_classifier.html#ae30e1e7fe633179eac9bac88e46da360">   24</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_other_classifier.html#ae30e1e7fe633179eac9bac88e46da360">predict</a>(<a class="code hl_class" href="class_data.html">Data</a>&amp;) = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_8h_source.html#l00019">Data.h:20</a></div></div>
+<div class="ttc" id="aclass_other_classifier_html"><div class="ttname"><a href="class_other_classifier.html">OtherClassifier</a></div><div class="ttdef"><b>Definition:</b> <a href="_other_classifier_8h_source.html#l00005">OtherClassifier.h:6</a></div></div>
+<div class="ttc" id="aclass_other_classifier_html_aa545e14e3b226499ac2e09e390e03988"><div class="ttname"><a href="class_other_classifier.html#aa545e14e3b226499ac2e09e390e03988">OtherClassifier::train</a></div><div class="ttdeci">virtual void train(Data &amp;)=0</div><div class="ttdoc">Virtual function for Training models.</div></div>
+<div class="ttc" id="aclass_other_classifier_html_ae30e1e7fe633179eac9bac88e46da360"><div class="ttname"><a href="class_other_classifier.html#ae30e1e7fe633179eac9bac88e46da360">OtherClassifier::predict</a></div><div class="ttdeci">virtual std::string predict(Data &amp;)=0</div><div class="ttdoc">Virtual function for predicting labels.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_83e64706ce7506cb9d2dd5c91cf788b8.html">tomtr</a></li><li class="navelem"><a class="el" href="dir_3085a2883b282ec9fc46eda618b3cdca.html">source</a></li><li class="navelem"><a class="el" href="dir_a9cc46622d74165e65ff0c07c612f858.html">repos</a></li><li class="navelem"><a class="el" href="dir_8e8e84bc52d1700dd79915a7adc59601.html">iDividedBy0</a></li><li class="navelem"><a class="el" href="dir_1bc2cfbde96bf69deb79c8ec7927d14b.html">OOP_Project_TomTroczynski</a></li><li class="navelem"><a class="el" href="dir_cfcf0d27a7cd02fa4dc7d60855fbe6fc.html">OOP_Project</a></li><li class="navelem"><b>Classifier.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_83e64706ce7506cb9d2dd5c91cf788b8.html">tomtr</a></li><li class="navelem"><a class="el" href="dir_3085a2883b282ec9fc46eda618b3cdca.html">source</a></li><li class="navelem"><a class="el" href="dir_a9cc46622d74165e65ff0c07c612f858.html">repos</a></li><li class="navelem"><a class="el" href="dir_8e8e84bc52d1700dd79915a7adc59601.html">iDividedBy0</a></li><li class="navelem"><a class="el" href="dir_1bc2cfbde96bf69deb79c8ec7927d14b.html">OOP_Project_TomTroczynski</a></li><li class="navelem"><a class="el" href="dir_cfcf0d27a7cd02fa4dc7d60855fbe6fc.html">OOP_Project</a></li><li class="navelem"><b>OtherClassifier.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
