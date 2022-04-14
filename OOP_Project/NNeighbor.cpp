@@ -1,4 +1,5 @@
 #include "NNeighbor.h"
+#include "Exception.h"
 
 /*! \brief Makes prediction based on shortest distance
 *
@@ -26,7 +27,7 @@ std::string NNeighbor::evaluateClosest(Data& newData)
 
 		if (tempLeastDistance == tempCurrentDistance) {
 
-		return FAILEDTOFIND;
+			throw(Exception(FAILEDTOFINDCLOSEST));
 		}
 		if (tempCurrentDistance < tempLeastDistance) {
 
@@ -79,7 +80,7 @@ std::string NNeighbor::evaluateMeans(Data& newData)
 		return prediction;
 	}
 	else {
-		return FAILEDTOFIND;
+		throw(Exception(FAILEDTOFINDMEAN));
 	}
 }
 
@@ -107,13 +108,24 @@ void NNeighbor::train(Data& newData)
 std::string NNeighbor::predict(Data& newData)
 {
 	std::string prediction;
-	if ((prediction = evaluateClosest(newData)) != FAILEDTOFIND) {
+
+	try {
+		prediction = evaluateClosest(newData);
 		return prediction;
 	}
-	else if((prediction = evaluateMeans(newData)) != FAILEDTOFIND) {
+	catch (Exception& e) {
+		std::cout << "Error: " << e.getFault() << std::endl;
+		std::cout << "Evaluating mean distances for this vector: " << newData  << std::endl;
+	}
+	
+	try {
+		prediction = evaluateMeans(newData);
 		return prediction;
 	}
-	return FAILEDTOFIND;
+	catch (Exception& e) {
+		std::cout << "Error: " << e.getFault() << std::endl;
+	}
+	return prediction;
 }
 
 /*! \brief Retrieves the models data set

@@ -85,7 +85,7 @@ int main(void) {
 		fin.close();
 	}
 	else {
-		std::cout << "Failed to open the training file. Closing." << std::endl;
+ 		std::cout << "Failed to open the training file. Closing." << std::endl;
 		exit(EXIT_FAILURE);
 	}
 

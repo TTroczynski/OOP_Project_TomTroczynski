@@ -256,10 +256,18 @@ std::ofstream& operator<<(std::ofstream& fOut, std::vector<Data>& dataSet)
 */
 std::ostream& operator<<(std::ostream& cout, Data& dataPoint)
 {
-    cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ() << ", ";
-    
     std::string tempLabel = dataPoint.getLabel();
-    int tempLabelValue = std::stoi(tempLabel);
+    int tempLabelValue = -1;
+
+    cout << dataPoint.getX() << ", " << dataPoint.getY() << ", " << dataPoint.getZ();
+
+    if (tempLabel.empty()) {
+        return cout;
+    }
+
+    cout << ", ";
+
+    tempLabelValue = std::stoi(tempLabel);
 
     switch (tempLabelValue)
     {

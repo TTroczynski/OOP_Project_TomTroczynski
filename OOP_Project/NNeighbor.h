@@ -17,7 +17,8 @@
 #pragma once
 #include "Classifier.h"
 #define MAXSIDES 6
-#define FAILEDTOFIND "Failed to match vector"
+#define FAILEDTOFINDCLOSEST "Failed to find closest vector"
+#define FAILEDTOFINDMEAN "Failed to find closest mean"
 #define COIN 2
 
 class NNeighbor : protected Classifier
